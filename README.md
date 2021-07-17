@@ -35,17 +35,17 @@ Rocky Linux is a community enterprise operating system designed to be 100% bug-f
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name: 
-- Position:
-- Email address: 
+- Name: R. Leigh Hennig
+- Position: Operations Manager
+- Email address: rlh@rockylinux.org
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name:
-- Position:
-- Email address: 
+- Name: Rob Felsburg
+- Position: Security Manager
+- Email address: rfelsburg@rockylinux.org
 - PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
 
 -------------------------------------------------------------------------------
