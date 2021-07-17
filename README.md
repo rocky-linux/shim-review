@@ -37,16 +37,16 @@ Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
 - Name: R. Leigh Hennig
 - Position: Operations Manager
-- Email address: rlh@rockylinux.org
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
+- Email address: rlh@resf.org
+- PGP key:
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
 - Name: Rob Felsburg
 - Position: Security Manager
-- Email address: rfelsburg@rockylinux.org
-- PGP key, signed by the other security contacts, and preferably also with signatures that are reasonably well known in the Linux community:
+- Email address: rfelsburg@resf.org
+- PGP key: 
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
@@ -60,7 +60,7 @@ Yes, we are using shim 15.4 release tarball
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-[your url here]
+https://dl.rockylinux.org/stg/rocky/8/
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -111,7 +111,15 @@ upstream commit 1957a85b0032a81e6482ca4aab883643b8dae06e applied ?
 Is "ACPI: configfs: Disallow loading ACPI tables when locked down"
 upstream commit 75b0cea7bf307f362057cc778efe89af4c615354 applied ?
 -------------------------------------------------------------------------------
-[your text here]
+We have validated that all those commits present:
+
+475fb4e8b2f4444d1d7b406ff3a7d21bc89a1e6f
+1957a85b0032a81e6482ca4aab883643b8dae06e
+612bd01fc6e04c3ce9eb59587b4a7e4ebd6aff35
+75b0cea7bf307f362057cc778efe89af4c615354
+435d1a471598752446a72ad1201b3c980526d869
+
+And the configuration setting CONFIG_EFI_CUSTOM_SSDT_OVERLAYS is disabled.
 
 -------------------------------------------------------------------------------
 If you use vendor_db functionality of providing multiple certificates and/or
@@ -128,7 +136,7 @@ in order to prevent GRUB2 from being able to chainload those older GRUB2
 binaries. If you are changing to a new (CA) certificate, this does not
 apply. Please describe your strategy.
 -------------------------------------------------------------------------------
-[your text here]
+We are not reusing any previously used CA, this is our first submission
 
 -------------------------------------------------------------------------------
 What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as close as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
@@ -144,4 +152,4 @@ root.log and build.log
 -------------------------------------------------------------------------------
 Add any additional information you think we may need to validate this shim
 -------------------------------------------------------------------------------
-New vendor
+New vendor - First submission
