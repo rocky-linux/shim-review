@@ -43,10 +43,10 @@ Who is the primary contact for security updates, etc.
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
 -------------------------------------------------------------------------------
-- Name: Rob Felsburg
-- Position: Security Manager
-- Email address: rfelsburg@resf.org
-- PGP key: https://github.com/rocky-linux/shim-review/blob/master/rfelsburg.pub 
+- Name: Sherif Nagy
+- Position: Release Engineer
+- Email address: sherif@rockylinux.org
+- PGP key: https://github.com/rocky-linux/shim-review/blob/master/sherif.pub 
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
