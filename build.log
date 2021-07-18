@@ -1,21 +1,21 @@
 Mock Version: 2.11
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7ff1d501c630>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f2262371550>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/SPECS/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
 Wrote: /builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7ff1d501c630>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f2262371550>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bs --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
 Wrote: /builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.src.rpm
 Child return code was: 0
-ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7ff1d501c630>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
+ENTER ['do_with_status'](['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'], chrootPath='/var/lib/mock/rocky-8-x86_64/root'env={'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'}shell=Falselogger=<mockbuild.trace_decorator.getLog object at 0x7f2262371550>timeout=0uid=1001gid=135user='mockbuild'nspawn_args=[]unshare_net=TrueprintOutput=True)
 Executing command: ['bash', '--login', '-c', '/usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/originals/shim-unsigned-x64.spec'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 Building target platforms: x86_64
 Building for target x86_64
-Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.fyQ24M
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.2PVq05
 + umask 022
 + cd /builddir/build/BUILD
 + cd /builddir/build/BUILD
@@ -40,7 +40,7 @@ Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.fyQ24M
 + mkdir build-ia32
 + cp /builddir/build/SOURCES/sbat.rocky.csv data/
 + exit 0
-Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.je2IfO
+Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.2ficA3
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.4
@@ -634,7 +634,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.6991e-05 s, 148 kB/s
+4 bytes copied, 2.6501e-05 s, 151 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -672,7 +672,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 3.0423e-05 s, 131 kB/s
+4 bytes copied, 2.662e-05 s, 150 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -682,7 +682,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbx64.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.5365e-05 s, 158 kB/s
+4 bytes copied, 2.5528e-05 s, 157 kB/s
 + cd ..
 + cd build-ia32
 + setarch linux32 -B make TOPDIR=.. -f ../Makefile COMMITID=20e4d9486fcae54ee44d2323ae342ffe68c920e6 EFIDIR=rocky PKGNAME=shim RELEASE=4.el8.1 ENABLE_SHIM_HASH=true -j6 VENDOR_CERT_FILE=/builddir/build/SOURCES/rocky-root-ca.der ARCH=ia32 'DEFAULT_LOADER=\\\\grubia32.efi' all
@@ -1264,7 +1264,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=shimia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 3.0234e-05 s, 132 kB/s
+4 bytes copied, 3.1718e-05 s, 126 kB/s
 objcopy -D -j .text -j .sdata -j .data \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame -j .sbat \
@@ -1302,7 +1302,7 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=mmia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.5877e-05 s, 155 kB/s
+4 bytes copied, 2.7239e-05 s, 147 kB/s
 objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 	-j .dynamic -j .rodata -j .rel* \
 	-j .rela* -j .reloc -j .eh_frame \
@@ -1312,10 +1312,10 @@ objcopy -D -j .text -j .sdata -j .data -j .data.ident \
 dd conv=notrunc bs=1 count=4 seek=136 if=/dev/zero of=fbia32.efi
 4+0 records in
 4+0 records out
-4 bytes copied, 2.4958e-05 s, 160 kB/s
+4 bytes copied, 2.3442e-05 s, 171 kB/s
 + cd ..
 + exit 0
-Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.xf9EGL
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.mqDE44
 + umask 022
 + cd /builddir/build/BUILD
 + '[' /builddir/build/BUILDROOT/shim-unsigned-x64-15.4-4.el8.1.x86_64 '!=' / ']'
@@ -1380,7 +1380,7 @@ done
 + PYTHON3=/usr/libexec/platform-python
 + /usr/lib/rpm/redhat/brp-mangle-shebangs
 Processing files: shim-unsigned-x64-15.4-4.el8.1.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.TPUqaL
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.uCGZI6
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.4
@@ -1394,7 +1394,7 @@ Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.TPUqaL
 Provides: bundled(openssl) = 1.0.2j shim-unsigned-x64 = 15.4-4.el8.1 shim-unsigned-x64(x86-64) = 15.4-4.el8.1
 Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
 Processing files: shim-unsigned-ia32-15.4-4.el8.1.x86_64
-Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.WCPzzN
+Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.P3nAt6
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.4
@@ -1425,7 +1425,7 @@ Wrote: /builddir/build/RPMS/shim-unsigned-ia32-15.4-4.el8.1.x86_64.rpm
 Wrote: /builddir/build/RPMS/shim-unsigned-x64-debuginfo-15.4-4.el8.1.noarch.rpm
 Wrote: /builddir/build/RPMS/shim-unsigned-ia32-debuginfo-15.4-4.el8.1.noarch.rpm
 Wrote: /builddir/build/RPMS/shim-unsigned-x64-debugsource-15.4-4.el8.1.noarch.rpm
-Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.WkF9qK
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.aQtXY3
 + umask 022
 + cd /builddir/build/BUILD
 + cd shim-15.4
