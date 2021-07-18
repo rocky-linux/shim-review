@@ -102,7 +102,7 @@ by CVE-2020-14372, CVE-2020-25632, CVE-2020-25647, CVE-2020-27749,
   ( July 2020 grub2 CVE list + March 2021 grub2 CVE list )
   grub2 builds ?
 -------------------------------------------------------------------------------
-This is our first shim to get signed by Microsoft
+This is our first shim submission
 
 -------------------------------------------------------------------------------
 If your boot chain of trust includes linux kernel, is
