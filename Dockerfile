@@ -1,11 +1,6 @@
-FROM rockylinux/rockylinux:8
+FROM rockylinux/rockylinux-shim:8-154
 
-COPY rpmmacros /root/.rpmmacros
-
-RUN yum -y install wget
-RUN wget https://git.rockylinux.org/sherif/shim-review-r8.4/-/raw/master/shim-unsigned-x64-15.4-4.el8.1.src.rpm
-RUN yum -y install gcc make elfutils-libelf-devel git openssl openssl-devel pesign dos2unix rpm-build
-RUN rpm -e acl hostname
+RUN wget https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.src.rpm
 RUN rpm -ivh shim-unsigned-x64-15.4-4.el8.1.src.rpm
 RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec

@@ -30,7 +30,7 @@ Rocky Linux 8
 -------------------------------------------------------------------------------
 What's the justification that this really does need to be signed for the whole world to be able to boot it:
 -------------------------------------------------------------------------------
-Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with RHEL 
+Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with RHEL and replacing CentOS 8 since it will be EOL this year
 
 -------------------------------------------------------------------------------
 Who is the primary contact for security updates, etc.
@@ -38,7 +38,7 @@ Who is the primary contact for security updates, etc.
 - Name: R. Leigh Hennig
 - Position: Operations Manager
 - Email address: rlh@resf.org
-- PGP key:
+- PGP key: https://github.com/rocky-linux/shim-review/blob/master/rlh.pub
 
 -------------------------------------------------------------------------------
 Who is the secondary contact for security updates, etc.
@@ -46,7 +46,7 @@ Who is the secondary contact for security updates, etc.
 - Name: Rob Felsburg
 - Position: Security Manager
 - Email address: rfelsburg@resf.org
-- PGP key: 
+- PGP key: https://github.com/rocky-linux/shim-review/blob/master/rfelsburg.pub 
 
 -------------------------------------------------------------------------------
 Please create your shim binaries starting with the 15.4 shim release tar file:
@@ -60,7 +60,9 @@ Yes, we are using shim 15.4 release tarball
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-https://dl.rockylinux.org/stg/rocky/8/
+Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.src.rpm
+Repos are here: https://dl.rockylinux.org/stg/rocky/8/
+Also docker file provided
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -113,11 +115,13 @@ upstream commit 75b0cea7bf307f362057cc778efe89af4c615354 applied ?
 -------------------------------------------------------------------------------
 We have validated that all those commits present:
 
+```
 475fb4e8b2f4444d1d7b406ff3a7d21bc89a1e6f
 1957a85b0032a81e6482ca4aab883643b8dae06e
 612bd01fc6e04c3ce9eb59587b4a7e4ebd6aff35
 75b0cea7bf307f362057cc778efe89af4c615354
 435d1a471598752446a72ad1201b3c980526d869
+```
 
 And the configuration setting CONFIG_EFI_CUSTOM_SSDT_OVERLAYS is disabled.
 
@@ -127,7 +131,7 @@ hashes please briefly describe your certificate setup. If there are allow-listed
 please provide exact binaries for which hashes are created via file sharing service,
 available in public with anonymous access for verification
 -------------------------------------------------------------------------------
-We don't use vendor_db
+We don't use vendor_db functionality in this build
 
 -------------------------------------------------------------------------------
 If you are re-using a previously used (CA) certificate, you will need
