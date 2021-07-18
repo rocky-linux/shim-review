@@ -62,7 +62,6 @@ URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
 Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.src.rpm
 Repos are here: https://dl.rockylinux.org/stg/rocky/8/
-Also docker file provided
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
@@ -78,7 +77,6 @@ If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
  CVE-2020-15705, and if you are shipping the shim_lock module CVE-2021-3418
 -------------------------------------------------------------------------------
 All those exists and the signed bootloaders are derived from grub 2.02 with all of the relevant patches.
-
 
 -------------------------------------------------------------------------------
 What exact implementation of Secureboot in GRUB2 ( if this is your bootloader ) you have ?
