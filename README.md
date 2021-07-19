@@ -60,15 +60,21 @@ Yes, we are using shim 15.4 release tarball
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.src.rpm
+Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.1.src.rpm
 Repos are here: https://dl.rockylinux.org/stg/rocky/8/
 
 -------------------------------------------------------------------------------
 What patches are being applied and why:
 -------------------------------------------------------------------------------
-One patch same as RHEL located at:
+Few patch based on issue https://github.com/rhboot/shim-review/issues/165:
 
-https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0001-Fix-a-broken-file-header-on-ia32.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0001-Fix-handling-of-ignore_db-and-user_insecure_mode.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0002-shim-15.4-branch-update-.gitmodules-to-point-at-shim.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0003-Fix-a-broken-file-header-on-ia32.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0004-mok-allocate-MOK-config-table-as-BootServicesData.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0005-Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0006-Post-process-our-PE-to-be-sure.patch
+https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0007-Relax-the-check-for-import_mok_state.patch
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
