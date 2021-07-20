@@ -1,6 +1,6 @@
 FROM rockylinux/rockylinux-shim:8-154
 
-ENV SHIM_VERSION 15.4-4.el8.1.1
+ENV SHIM_VERSION 15.4-4.el8.1.2
 
 RUN wget https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-$SHIM_VERSION.src.rpm
 RUN rpm -ivh shim-unsigned-x64-$SHIM_VERSION.src.rpm
