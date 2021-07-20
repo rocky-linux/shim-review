@@ -60,7 +60,7 @@ Yes, we are using shim 15.4 release tarball
 -------------------------------------------------------------------------------
 URL for a repo that contains the exact code which was built to get this binary:
 -------------------------------------------------------------------------------
-Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.1.src.rpm
+Shim SRPM is here: https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-15.4-4.el8.1.2.src.rpm
 Repos are here: https://dl.rockylinux.org/stg/rocky/8/
 
 -------------------------------------------------------------------------------
@@ -75,6 +75,9 @@ Few patch based on issue https://github.com/rhboot/shim-review/issues/165:
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0005-Don-t-call-QueryVariableInfo-on-EFI-1.10-machines.patch
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0006-Post-process-our-PE-to-be-sure.patch
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0007-Relax-the-check-for-import_mok_state.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0008-SBAT.md-trivial-fixes.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0009-SBAT.md-fix-will-should.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0010-shim-another-attempt-to-fix-load-options-handling.patch
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
