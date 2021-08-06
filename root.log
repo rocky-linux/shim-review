@@ -8,247 +8,6 @@ DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/fst
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/yum/yum.conf
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/dnf/dnf.conf
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/var/log/yum.log
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/yum
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/yum_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/dnf
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/dnf_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/proc
-DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/proc/filesystems
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.r00g2wn_', '/var/lib/mock/rocky-8-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private', 'tmpfs', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG buildroot.py:195:  rootdir = /var/lib/mock/rocky-8-x86_64/root
-DEBUG buildroot.py:196:  resultdir = /home/sherif/shim_review_1.2
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/pki/mock
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/dnf
-DEBUG package_manager.py:570:  configure DNF vars
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '71372634e6694b3db9ffbd608f60d8d1', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'bacf7489890b475888a5386aa1829517', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupdel', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '7ce1b80daf3b49aa8b3dd7b073a87d70', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupadd', '-g', '135', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '7d682049bfbf45e2a221b12b28927f1c', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/useradd', '-o', '-m', '-u', '1001', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '83527daa12064d229abde6203356345c', '-D', '/var/lib/mock/rocky-8-x86_64-bootstrap/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:446:  libgcc-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  python3-setuptools-wheel-39.2.0-6.el8.noarch
-DEBUG util.py:446:  python-srpm-macros-3-41.el8.noarch
-DEBUG util.py:446:  python3-rpm-macros-3-41.el8.noarch
-DEBUG util.py:446:  filesystem-3.8-3.el8.x86_64
-DEBUG util.py:446:  publicsuffix-list-dafsa-20180723-1.el8.noarch
-DEBUG util.py:446:  ncurses-base-6.1-7.20180224.el8.1.noarch
-DEBUG util.py:446:  libselinux-2.9-5.el8.x86_64
-DEBUG util.py:446:  glibc-all-langpacks-2.28-151.el8.x86_64
-DEBUG util.py:446:  glibc-2.28-151.el8.x86_64
-DEBUG util.py:446:  libsepol-2.9-2.el8.x86_64
-DEBUG util.py:446:  info-6.5-6.el8.x86_64
-DEBUG util.py:446:  gmp-6.1.2-10.el8.x86_64
-DEBUG util.py:446:  libxcrypt-4.1.1-4.el8.x86_64
-DEBUG util.py:446:  libstdc++-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  readline-7.0-10.el8.x86_64
-DEBUG util.py:446:  libcom_err-1.45.6-1.el8.1.x86_64
-DEBUG util.py:446:  popt-1.18-1.el8.x86_64
-DEBUG util.py:446:  chkconfig-1.13-2.el8.x86_64
-DEBUG util.py:446:  expat-2.2.5-4.el8.x86_64
-DEBUG util.py:446:  libacl-2.2.53-1.el8.1.x86_64
-DEBUG util.py:446:  libffi-3.1-22.el8.x86_64
-DEBUG util.py:446:  libgpg-error-1.31-1.el8.x86_64
-DEBUG util.py:446:  libidn2-2.2.0-1.el8.x86_64
-DEBUG util.py:446:  file-libs-5.33-16.el8_3.1.x86_64
-DEBUG util.py:446:  libgcrypt-1.8.5-4.el8.x86_64
-DEBUG util.py:446:  findutils-4.6.0-20.el8.x86_64
-DEBUG util.py:446:  elfutils-default-yama-scope-0.182-3.el8.noarch
-DEBUG util.py:446:  gdbm-libs-1.18-1.el8.x86_64
-DEBUG util.py:446:  libcap-ng-0.7.9-5.el8.x86_64
-DEBUG util.py:446:  libtasn1-4.13-3.el8.x86_64
-DEBUG util.py:446:  lz4-libs-1.8.3-3.el8_4.x86_64
-DEBUG util.py:446:  grep-3.1-6.el8.x86_64
-DEBUG util.py:446:  libsemanage-2.9-6.el8.x86_64
-DEBUG util.py:446:  elfutils-0.182-3.el8.x86_64
-DEBUG util.py:446:  cpp-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  libassuan-2.5.1-3.el8.x86_64
-DEBUG util.py:446:  tar-1.30-5.el8.x86_64
-DEBUG util.py:446:  libmetalink-0.1.3-7.el8.x86_64
-DEBUG util.py:446:  zstd-1.4.4-1.el8.x86_64
-DEBUG util.py:446:  libxml2-2.9.7-9.el8_4.2.x86_64
-DEBUG util.py:446:  nettle-3.4.1-4.el8_4.x86_64
-DEBUG util.py:446:  bzip2-1.0.6-26.el8.x86_64
-DEBUG util.py:446:  diffutils-3.6-6.el8.x86_64
-DEBUG util.py:446:  less-530-1.el8.x86_64
-DEBUG util.py:446:  gc-7.6.4-3.el8.x86_64
-DEBUG util.py:446:  brotli-1.0.6-3.el8.x86_64
-DEBUG util.py:446:  libedit-3.1-23.20170329cvs.el8.x86_64
-DEBUG util.py:446:  libpkgconf-1.4.2-1.el8.x86_64
-DEBUG util.py:446:  pkgconf-pkg-config-1.4.2-1.el8.x86_64
-DEBUG util.py:446:  gawk-4.2.1-2.el8.x86_64
-DEBUG util.py:446:  libtool-ltdl-2.4.6-25.el8.x86_64
-DEBUG util.py:446:  ncurses-6.1-7.20180224.el8.1.x86_64
-DEBUG util.py:446:  coreutils-8.30-8.el8.x86_64
-DEBUG util.py:446:  libdb-5.3.28-40.el8.x86_64
-DEBUG util.py:446:  libtirpc-1.1.4-4.el8.x86_64
-DEBUG util.py:446:  libmount-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  libnsl2-1.2.0-2.20180605git4a062cf.el8.x86_64
-DEBUG util.py:446:  platform-python-3.6.8-37.el8.rocky.x86_64
-DEBUG util.py:446:  binutils-2.30-93.el8.x86_64
-DEBUG util.py:446:  cracklib-2.9.6-15.el8.x86_64
-DEBUG util.py:446:  libpwquality-1.4.4-3.el8.x86_64
-DEBUG util.py:446:  libusbx-1.0.23-4.el8.x86_64
-DEBUG util.py:446:  libbabeltrace-1.5.4-3.el8.x86_64
-DEBUG util.py:446:  cyrus-sasl-lib-2.1.27-5.el8.x86_64
-DEBUG util.py:446:  libdb-utils-5.3.28-40.el8.x86_64
-DEBUG util.py:446:  shadow-utils-4.6-12.el8.x86_64
-DEBUG util.py:446:  util-linux-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  openssh-clients-8.0p1-6.el8_4.2.x86_64
-DEBUG util.py:446:  tpm2-tss-2.3.2-3.el8.x86_64
-DEBUG util.py:446:  npth-1.5-4.el8.x86_64
-DEBUG util.py:446:  libssh-config-0.9.4-2.el8.noarch
-DEBUG util.py:446:  libcurl-7.61.1-18.el8.x86_64
-DEBUG util.py:446:  rpm-4.14.3-14.el8_4.x86_64
-DEBUG util.py:446:  gdb-headless-8.2-15.el8.x86_64
-DEBUG util.py:446:  efi-srpm-macros-3-3.el8.noarch
-DEBUG util.py:446:  glibc-headers-2.28-151.el8.x86_64
-DEBUG util.py:446:  glibc-devel-2.28-151.el8.x86_64
-DEBUG util.py:446:  annobin-9.50-1.el8.x86_64
-DEBUG util.py:446:  qt5-srpm-macros-5.12.5-3.el8.noarch
-DEBUG util.py:446:  openblas-srpm-macros-2-2.el8.noarch
-DEBUG util.py:446:  go-srpm-macros-2-17.el8.noarch
-DEBUG util.py:446:  redhat-rpm-config-125-1.el8.noarch
-DEBUG util.py:446:  gcc-c++-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  make-4.2.1-10.el8.x86_64
-DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch
-DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch
-DEBUG util.py:446:  gpg-pubkey-6d745a60-60287f36
-DEBUG util.py:446:  crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch
-DEBUG util.py:446:  python3-pip-wheel-9.0.3-19.el8.rocky.noarch
-DEBUG util.py:446:  python-rpm-macros-3-41.el8.noarch
-DEBUG util.py:446:  tzdata-2021a-1.el8.noarch
-DEBUG util.py:446:  setup-2.12.2-6.el8.noarch
-DEBUG util.py:446:  basesystem-11-5.el8.noarch
-DEBUG util.py:446:  pkgconf-m4-1.4.2-1.el8.noarch
-DEBUG util.py:446:  pcre2-10.32-2.el8.x86_64
-DEBUG util.py:446:  ncurses-libs-6.1-7.20180224.el8.1.x86_64
-DEBUG util.py:446:  glibc-common-2.28-151.el8.x86_64
-DEBUG util.py:446:  bash-4.4.20-1.el8_4.x86_64
-DEBUG util.py:446:  zlib-1.2.11-17.el8.x86_64
-DEBUG util.py:446:  bzip2-libs-1.0.6-26.el8.x86_64
-DEBUG util.py:446:  xz-libs-5.2.4-3.el8.1.x86_64
-DEBUG util.py:446:  elfutils-libelf-0.182-3.el8.x86_64
-DEBUG util.py:446:  mpfr-3.1.6-1.el8.x86_64
-DEBUG util.py:446:  libcap-2.26-4.el8.x86_64
-DEBUG util.py:446:  libzstd-1.4.4-1.el8.x86_64
-DEBUG util.py:446:  libuuid-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  libunistring-0.9.9-3.el8.x86_64
-DEBUG util.py:446:  libattr-2.4.48-3.el8.x86_64
-DEBUG util.py:446:  sed-4.5-2.el8.x86_64
-DEBUG util.py:446:  p11-kit-0.23.22-1.el8.x86_64
-DEBUG util.py:446:  lua-libs-5.3.4-11.el8.x86_64
-DEBUG util.py:446:  libmpc-1.1.0-9.1.el8.x86_64
-DEBUG util.py:446:  file-5.33-16.el8_3.1.x86_64
-DEBUG util.py:446:  unzip-6.0-45.el8_4.x86_64
-DEBUG util.py:446:  sqlite-libs-3.26.0-13.el8.x86_64
-DEBUG util.py:446:  elfutils-libs-0.182-3.el8.x86_64
-DEBUG util.py:446:  keyutils-libs-1.5.10-6.el8.x86_64
-DEBUG util.py:446:  audit-libs-3.0-0.17.20191104git1c2f876.el8.1.x86_64
-DEBUG util.py:446:  p11-kit-trust-0.23.22-1.el8.x86_64
-DEBUG util.py:446:  pcre-8.42-4.el8.x86_64
-DEBUG util.py:446:  xz-5.2.4-3.el8.1.x86_64
-DEBUG util.py:446:  gdbm-1.18-1.el8.x86_64
-DEBUG util.py:446:  zip-3.0-23.el8.x86_64
-DEBUG util.py:446:  libpsl-0.20.2-6.el8.x86_64
-DEBUG util.py:446:  libksba-1.3.5-7.el8.x86_64
-DEBUG util.py:446:  patch-2.7.6-11.el8.x86_64
-DEBUG util.py:446:  libstdc++-devel-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  dwz-0.12-9.el8.x86_64
-DEBUG util.py:446:  isl-0.16.1-6.el8.x86_64
-DEBUG util.py:446:  gnutls-3.6.14-8.el8_3.x86_64
-DEBUG util.py:446:  coreutils-common-8.30-8.el8.x86_64
-DEBUG util.py:446:  libgomp-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  libatomic_ops-7.6.2-3.el8.x86_64
-DEBUG util.py:446:  libipt-1.6.1-8.el8.x86_64
-DEBUG util.py:446:  cpio-2.12-10.el8.x86_64
-DEBUG util.py:446:  libnghttp2-1.33.0-3.el8_3.1.x86_64
-DEBUG util.py:446:  pkgconf-1.4.2-1.el8.x86_64
-DEBUG util.py:446:  libsigsegv-2.11-5.el8.x86_64
-DEBUG util.py:446:  libsmartcols-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  libverto-0.3.0-5.el8.x86_64
-DEBUG util.py:446:  openssl-libs-1.1.1g-15.el8_3.x86_64
-DEBUG util.py:446:  ca-certificates-2020.2.41-80.0.el8_2.noarch
-DEBUG util.py:446:  krb5-libs-1.18.2-8.el8.x86_64
-DEBUG util.py:446:  libblkid-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  systemd-libs-239-45.el8_4.1.x86_64
-DEBUG util.py:446:  platform-python-setuptools-39.2.0-6.el8.noarch
-DEBUG util.py:446:  python3-libs-3.6.8-37.el8.rocky.x86_64
-DEBUG util.py:446:  gzip-1.9-12.el8.x86_64
-DEBUG util.py:446:  cracklib-dicts-2.9.6-15.el8.x86_64
-DEBUG util.py:446:  pam-1.3.1-14.el8.x86_64
-DEBUG util.py:446:  glib2-2.56.4-10.el8_4.x86_64
-DEBUG util.py:446:  libfdisk-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  openldap-2.4.46-17.el8_4.x86_64
-DEBUG util.py:446:  guile-2.0.14-7.el8.x86_64
-DEBUG util.py:446:  libutempter-1.1.6-14.el8.x86_64
-DEBUG util.py:446:  openssh-8.0p1-6.el8_4.2.x86_64
-DEBUG util.py:446:  libarchive-3.3.3-1.el8.x86_64
-DEBUG util.py:446:  ima-evm-utils-1.3.2-12.el8.x86_64
-DEBUG util.py:446:  gnupg2-2.2.20-2.el8.x86_64
-DEBUG util.py:446:  libssh-0.9.4-2.el8.x86_64
-DEBUG util.py:446:  curl-7.61.1-18.el8.x86_64
-DEBUG util.py:446:  rpm-libs-4.14.3-14.el8_4.x86_64
-DEBUG util.py:446:  rpm-build-libs-4.14.3-14.el8_4.x86_64
-DEBUG util.py:446:  kernel-headers-4.18.0-305.7.1.el8_4.x86_64
-DEBUG util.py:446:  libxcrypt-devel-4.1.1-4.el8.x86_64
-DEBUG util.py:446:  gcc-8.4.1-1.el8.x86_64
-DEBUG util.py:446:  rust-srpm-macros-5-2.el8.noarch
-DEBUG util.py:446:  perl-srpm-macros-1-25.el8.noarch
-DEBUG util.py:446:  ocaml-srpm-macros-5-4.el8.noarch
-DEBUG util.py:446:  ghc-srpm-macros-1.4.2-7.el8.noarch
-DEBUG util.py:446:  rpm-build-4.14.3-14.el8_4.x86_64
-DEBUG util.py:446:  git-core-2.27.0-1.el8.x86_64
-DEBUG util.py:446:  which-2.21-12.el8.x86_64
-DEBUG util.py:446:  rocky-release-8.4-32.el8.noarch
-DEBUG util.py:598:  Child return code was: 0
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/proc
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -283,57 +42,70 @@ DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/r
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/installation-homedir
-DEBUG package_manager.py:197:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '-y', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', 'update']
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/yum
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.70w8qu1q:/etc/resolv.conf']
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '47a2d7abf36e473194554279dc030f1f', '-D', '/var/lib/mock/rocky-8-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.70w8qu1q:/etc/resolv.conf', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-8-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '-y', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', 'update', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-8-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:444:  No matches found for the following disable plugin patterns: local, spacewalk
-DEBUG util.py:446:  Rocky Linux 8 - AppStream                                                                                                                                                              15 kB/s | 4.3 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - AppStream                                                                                                                                                             9.1 MB/s | 7.8 MB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - BaseOS                                                                                                                                                                 16 kB/s | 3.9 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - BaseOS                                                                                                                                                                5.7 MB/s | 3.5 MB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - Extras                                                                                                                                                                9.8 kB/s | 3.1 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - Extras                                                                                                                                                                 10 kB/s | 3.8 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                             14 kB/s | 4.3 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                            1.0 MB/s | 2.1 MB     00:02    
-DEBUG util.py:446:  Dependencies resolved.
-DEBUG util.py:446:  Nothing to do.
-DEBUG util.py:446:  Complete!
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/yum_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/dnf_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.0nqv0hup', '/var/lib/mock/rocky-8-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private', 'tmpfs', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/rocky-8-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/sherif/shim_review_1.3
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/sbin/userdel', '-r', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:542:  Executing command: ['/usr/sbin/groupdel', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:542:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:542:  Executing command: ['/usr/sbin/useradd', '-o', '-m', '-u', '1001', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:169:  kill orphans
-DEBUG buildroot.py:510:  removing 3 rpm db files
-DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.001
-DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.003
-DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.002
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '4bcd185d15594efd8f014bca46488e1f', '-D', '/var/lib/mock/rocky-8-x86_64-bootstrap/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:542:  Executing command: ['/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:446:  libgcc-8.4.1-1.el8.x86_64
 DEBUG util.py:446:  python3-setuptools-wheel-39.2.0-6.el8.noarch
 DEBUG util.py:446:  python-srpm-macros-3-41.el8.noarch
 DEBUG util.py:446:  python3-rpm-macros-3-41.el8.noarch
+DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch
+DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch
 DEBUG util.py:446:  filesystem-3.8-3.el8.x86_64
 DEBUG util.py:446:  publicsuffix-list-dafsa-20180723-1.el8.noarch
 DEBUG util.py:446:  ncurses-base-6.1-7.20180224.el8.1.noarch
@@ -415,13 +187,12 @@ DEBUG util.py:446:  go-srpm-macros-2-17.el8.noarch
 DEBUG util.py:446:  redhat-rpm-config-125-1.el8.noarch
 DEBUG util.py:446:  gcc-c++-8.4.1-1.el8.x86_64
 DEBUG util.py:446:  make-4.2.1-10.el8.x86_64
-DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch
-DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch
 DEBUG util.py:446:  gpg-pubkey-6d745a60-60287f36
 DEBUG util.py:446:  crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch
 DEBUG util.py:446:  python3-pip-wheel-9.0.3-19.el8.rocky.noarch
 DEBUG util.py:446:  python-rpm-macros-3-41.el8.noarch
 DEBUG util.py:446:  tzdata-2021a-1.el8.noarch
+DEBUG util.py:446:  rocky-release-8.4-32.el8.noarch
 DEBUG util.py:446:  setup-2.12.2-6.el8.noarch
 DEBUG util.py:446:  basesystem-11-5.el8.noarch
 DEBUG util.py:446:  pkgconf-m4-1.4.2-1.el8.noarch
@@ -475,7 +246,7 @@ DEBUG util.py:446:  openssl-libs-1.1.1g-15.el8_3.x86_64
 DEBUG util.py:446:  ca-certificates-2020.2.41-80.0.el8_2.noarch
 DEBUG util.py:446:  krb5-libs-1.18.2-8.el8.x86_64
 DEBUG util.py:446:  libblkid-2.32.1-27.el8.x86_64
-DEBUG util.py:446:  systemd-libs-239-45.el8_4.1.x86_64
+DEBUG util.py:446:  systemd-libs-239-45.el8_4.2.x86_64
 DEBUG util.py:446:  platform-python-setuptools-39.2.0-6.el8.noarch
 DEBUG util.py:446:  python3-libs-3.6.8-37.el8.rocky.x86_64
 DEBUG util.py:446:  gzip-1.9-12.el8.x86_64
@@ -494,7 +265,7 @@ DEBUG util.py:446:  libssh-0.9.4-2.el8.x86_64
 DEBUG util.py:446:  curl-7.61.1-18.el8.x86_64
 DEBUG util.py:446:  rpm-libs-4.14.3-14.el8_4.x86_64
 DEBUG util.py:446:  rpm-build-libs-4.14.3-14.el8_4.x86_64
-DEBUG util.py:446:  kernel-headers-4.18.0-305.7.1.el8_4.x86_64
+DEBUG util.py:446:  kernel-headers-4.18.0-305.10.2.el8_4.x86_64
 DEBUG util.py:446:  libxcrypt-devel-4.1.1-4.el8.x86_64
 DEBUG util.py:446:  gcc-8.4.1-1.el8.x86_64
 DEBUG util.py:446:  rust-srpm-macros-5-2.el8.noarch
@@ -504,7 +275,202 @@ DEBUG util.py:446:  ghc-srpm-macros-1.4.2-7.el8.noarch
 DEBUG util.py:446:  rpm-build-4.14.3-14.el8_4.x86_64
 DEBUG util.py:446:  git-core-2.27.0-1.el8.x86_64
 DEBUG util.py:446:  which-2.21-12.el8.x86_64
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/installation-homedir
+DEBUG package_manager.py:197:  ['/usr/bin/dnf', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '-y', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', 'update']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/bin/dnf', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '-y', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', 'update', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-8-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
+DEBUG util.py:444:  No matches found for the following disable plugin patterns: local, spacewalk
+DEBUG util.py:446:  Rocky Linux 8 - AppStream                                                                                                                                                              14 kB/s | 4.8 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - BaseOS                                                                                                                                                                 16 kB/s | 4.3 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - Extras                                                                                                                                                                7.3 kB/s | 3.5 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                             15 kB/s | 4.8 kB     00:00    
+DEBUG util.py:446:  Dependencies resolved.
+DEBUG util.py:446:  Nothing to do.
+DEBUG util.py:446:  Complete!
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:169:  kill orphans
+DEBUG buildroot.py:510:  removing 3 rpm db files
+DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.001
+DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.003
+DEBUG buildroot.py:515:  nuke_rpm_db: removing /var/lib/mock/rocky-8-x86_64/root/var/lib/rpm/__db.002
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/rpm', '-qa', '--root', '/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:446:  libgcc-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  python3-setuptools-wheel-39.2.0-6.el8.noarch
+DEBUG util.py:446:  python-srpm-macros-3-41.el8.noarch
+DEBUG util.py:446:  python3-rpm-macros-3-41.el8.noarch
+DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch
+DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch
+DEBUG util.py:446:  filesystem-3.8-3.el8.x86_64
+DEBUG util.py:446:  publicsuffix-list-dafsa-20180723-1.el8.noarch
+DEBUG util.py:446:  ncurses-base-6.1-7.20180224.el8.1.noarch
+DEBUG util.py:446:  libselinux-2.9-5.el8.x86_64
+DEBUG util.py:446:  glibc-all-langpacks-2.28-151.el8.x86_64
+DEBUG util.py:446:  glibc-2.28-151.el8.x86_64
+DEBUG util.py:446:  libsepol-2.9-2.el8.x86_64
+DEBUG util.py:446:  info-6.5-6.el8.x86_64
+DEBUG util.py:446:  gmp-6.1.2-10.el8.x86_64
+DEBUG util.py:446:  libxcrypt-4.1.1-4.el8.x86_64
+DEBUG util.py:446:  libstdc++-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  readline-7.0-10.el8.x86_64
+DEBUG util.py:446:  libcom_err-1.45.6-1.el8.1.x86_64
+DEBUG util.py:446:  popt-1.18-1.el8.x86_64
+DEBUG util.py:446:  chkconfig-1.13-2.el8.x86_64
+DEBUG util.py:446:  expat-2.2.5-4.el8.x86_64
+DEBUG util.py:446:  libacl-2.2.53-1.el8.1.x86_64
+DEBUG util.py:446:  libffi-3.1-22.el8.x86_64
+DEBUG util.py:446:  libgpg-error-1.31-1.el8.x86_64
+DEBUG util.py:446:  libidn2-2.2.0-1.el8.x86_64
+DEBUG util.py:446:  file-libs-5.33-16.el8_3.1.x86_64
+DEBUG util.py:446:  libgcrypt-1.8.5-4.el8.x86_64
+DEBUG util.py:446:  findutils-4.6.0-20.el8.x86_64
+DEBUG util.py:446:  elfutils-default-yama-scope-0.182-3.el8.noarch
+DEBUG util.py:446:  gdbm-libs-1.18-1.el8.x86_64
+DEBUG util.py:446:  libcap-ng-0.7.9-5.el8.x86_64
+DEBUG util.py:446:  libtasn1-4.13-3.el8.x86_64
+DEBUG util.py:446:  lz4-libs-1.8.3-3.el8_4.x86_64
+DEBUG util.py:446:  grep-3.1-6.el8.x86_64
+DEBUG util.py:446:  libsemanage-2.9-6.el8.x86_64
+DEBUG util.py:446:  elfutils-0.182-3.el8.x86_64
+DEBUG util.py:446:  cpp-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  libassuan-2.5.1-3.el8.x86_64
+DEBUG util.py:446:  tar-1.30-5.el8.x86_64
+DEBUG util.py:446:  libmetalink-0.1.3-7.el8.x86_64
+DEBUG util.py:446:  zstd-1.4.4-1.el8.x86_64
+DEBUG util.py:446:  libxml2-2.9.7-9.el8_4.2.x86_64
+DEBUG util.py:446:  nettle-3.4.1-4.el8_4.x86_64
+DEBUG util.py:446:  bzip2-1.0.6-26.el8.x86_64
+DEBUG util.py:446:  diffutils-3.6-6.el8.x86_64
+DEBUG util.py:446:  less-530-1.el8.x86_64
+DEBUG util.py:446:  gc-7.6.4-3.el8.x86_64
+DEBUG util.py:446:  brotli-1.0.6-3.el8.x86_64
+DEBUG util.py:446:  libedit-3.1-23.20170329cvs.el8.x86_64
+DEBUG util.py:446:  libpkgconf-1.4.2-1.el8.x86_64
+DEBUG util.py:446:  pkgconf-pkg-config-1.4.2-1.el8.x86_64
+DEBUG util.py:446:  gawk-4.2.1-2.el8.x86_64
+DEBUG util.py:446:  libtool-ltdl-2.4.6-25.el8.x86_64
+DEBUG util.py:446:  ncurses-6.1-7.20180224.el8.1.x86_64
+DEBUG util.py:446:  coreutils-8.30-8.el8.x86_64
+DEBUG util.py:446:  libdb-5.3.28-40.el8.x86_64
+DEBUG util.py:446:  libtirpc-1.1.4-4.el8.x86_64
+DEBUG util.py:446:  libmount-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  libnsl2-1.2.0-2.20180605git4a062cf.el8.x86_64
+DEBUG util.py:446:  platform-python-3.6.8-37.el8.rocky.x86_64
+DEBUG util.py:446:  binutils-2.30-93.el8.x86_64
+DEBUG util.py:446:  cracklib-2.9.6-15.el8.x86_64
+DEBUG util.py:446:  libpwquality-1.4.4-3.el8.x86_64
+DEBUG util.py:446:  libusbx-1.0.23-4.el8.x86_64
+DEBUG util.py:446:  libbabeltrace-1.5.4-3.el8.x86_64
+DEBUG util.py:446:  cyrus-sasl-lib-2.1.27-5.el8.x86_64
+DEBUG util.py:446:  libdb-utils-5.3.28-40.el8.x86_64
+DEBUG util.py:446:  shadow-utils-4.6-12.el8.x86_64
+DEBUG util.py:446:  util-linux-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  openssh-clients-8.0p1-6.el8_4.2.x86_64
+DEBUG util.py:446:  tpm2-tss-2.3.2-3.el8.x86_64
+DEBUG util.py:446:  npth-1.5-4.el8.x86_64
+DEBUG util.py:446:  libssh-config-0.9.4-2.el8.noarch
+DEBUG util.py:446:  libcurl-7.61.1-18.el8.x86_64
+DEBUG util.py:446:  rpm-4.14.3-14.el8_4.x86_64
+DEBUG util.py:446:  gdb-headless-8.2-15.el8.x86_64
+DEBUG util.py:446:  efi-srpm-macros-3-3.el8.noarch
+DEBUG util.py:446:  glibc-headers-2.28-151.el8.x86_64
+DEBUG util.py:446:  glibc-devel-2.28-151.el8.x86_64
+DEBUG util.py:446:  annobin-9.50-1.el8.x86_64
+DEBUG util.py:446:  qt5-srpm-macros-5.12.5-3.el8.noarch
+DEBUG util.py:446:  openblas-srpm-macros-2-2.el8.noarch
+DEBUG util.py:446:  go-srpm-macros-2-17.el8.noarch
+DEBUG util.py:446:  redhat-rpm-config-125-1.el8.noarch
+DEBUG util.py:446:  gcc-c++-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  make-4.2.1-10.el8.x86_64
+DEBUG util.py:446:  gpg-pubkey-6d745a60-60287f36
+DEBUG util.py:446:  crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch
+DEBUG util.py:446:  python3-pip-wheel-9.0.3-19.el8.rocky.noarch
+DEBUG util.py:446:  python-rpm-macros-3-41.el8.noarch
+DEBUG util.py:446:  tzdata-2021a-1.el8.noarch
 DEBUG util.py:446:  rocky-release-8.4-32.el8.noarch
+DEBUG util.py:446:  setup-2.12.2-6.el8.noarch
+DEBUG util.py:446:  basesystem-11-5.el8.noarch
+DEBUG util.py:446:  pkgconf-m4-1.4.2-1.el8.noarch
+DEBUG util.py:446:  pcre2-10.32-2.el8.x86_64
+DEBUG util.py:446:  ncurses-libs-6.1-7.20180224.el8.1.x86_64
+DEBUG util.py:446:  glibc-common-2.28-151.el8.x86_64
+DEBUG util.py:446:  bash-4.4.20-1.el8_4.x86_64
+DEBUG util.py:446:  zlib-1.2.11-17.el8.x86_64
+DEBUG util.py:446:  bzip2-libs-1.0.6-26.el8.x86_64
+DEBUG util.py:446:  xz-libs-5.2.4-3.el8.1.x86_64
+DEBUG util.py:446:  elfutils-libelf-0.182-3.el8.x86_64
+DEBUG util.py:446:  mpfr-3.1.6-1.el8.x86_64
+DEBUG util.py:446:  libcap-2.26-4.el8.x86_64
+DEBUG util.py:446:  libzstd-1.4.4-1.el8.x86_64
+DEBUG util.py:446:  libuuid-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  libunistring-0.9.9-3.el8.x86_64
+DEBUG util.py:446:  libattr-2.4.48-3.el8.x86_64
+DEBUG util.py:446:  sed-4.5-2.el8.x86_64
+DEBUG util.py:446:  p11-kit-0.23.22-1.el8.x86_64
+DEBUG util.py:446:  lua-libs-5.3.4-11.el8.x86_64
+DEBUG util.py:446:  libmpc-1.1.0-9.1.el8.x86_64
+DEBUG util.py:446:  file-5.33-16.el8_3.1.x86_64
+DEBUG util.py:446:  unzip-6.0-45.el8_4.x86_64
+DEBUG util.py:446:  sqlite-libs-3.26.0-13.el8.x86_64
+DEBUG util.py:446:  elfutils-libs-0.182-3.el8.x86_64
+DEBUG util.py:446:  keyutils-libs-1.5.10-6.el8.x86_64
+DEBUG util.py:446:  audit-libs-3.0-0.17.20191104git1c2f876.el8.1.x86_64
+DEBUG util.py:446:  p11-kit-trust-0.23.22-1.el8.x86_64
+DEBUG util.py:446:  pcre-8.42-4.el8.x86_64
+DEBUG util.py:446:  xz-5.2.4-3.el8.1.x86_64
+DEBUG util.py:446:  gdbm-1.18-1.el8.x86_64
+DEBUG util.py:446:  zip-3.0-23.el8.x86_64
+DEBUG util.py:446:  libpsl-0.20.2-6.el8.x86_64
+DEBUG util.py:446:  libksba-1.3.5-7.el8.x86_64
+DEBUG util.py:446:  patch-2.7.6-11.el8.x86_64
+DEBUG util.py:446:  libstdc++-devel-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  dwz-0.12-9.el8.x86_64
+DEBUG util.py:446:  isl-0.16.1-6.el8.x86_64
+DEBUG util.py:446:  gnutls-3.6.14-8.el8_3.x86_64
+DEBUG util.py:446:  coreutils-common-8.30-8.el8.x86_64
+DEBUG util.py:446:  libgomp-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  libatomic_ops-7.6.2-3.el8.x86_64
+DEBUG util.py:446:  libipt-1.6.1-8.el8.x86_64
+DEBUG util.py:446:  cpio-2.12-10.el8.x86_64
+DEBUG util.py:446:  libnghttp2-1.33.0-3.el8_3.1.x86_64
+DEBUG util.py:446:  pkgconf-1.4.2-1.el8.x86_64
+DEBUG util.py:446:  libsigsegv-2.11-5.el8.x86_64
+DEBUG util.py:446:  libsmartcols-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  libverto-0.3.0-5.el8.x86_64
+DEBUG util.py:446:  openssl-libs-1.1.1g-15.el8_3.x86_64
+DEBUG util.py:446:  ca-certificates-2020.2.41-80.0.el8_2.noarch
+DEBUG util.py:446:  krb5-libs-1.18.2-8.el8.x86_64
+DEBUG util.py:446:  libblkid-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  systemd-libs-239-45.el8_4.2.x86_64
+DEBUG util.py:446:  platform-python-setuptools-39.2.0-6.el8.noarch
+DEBUG util.py:446:  python3-libs-3.6.8-37.el8.rocky.x86_64
+DEBUG util.py:446:  gzip-1.9-12.el8.x86_64
+DEBUG util.py:446:  cracklib-dicts-2.9.6-15.el8.x86_64
+DEBUG util.py:446:  pam-1.3.1-14.el8.x86_64
+DEBUG util.py:446:  glib2-2.56.4-10.el8_4.x86_64
+DEBUG util.py:446:  libfdisk-2.32.1-27.el8.x86_64
+DEBUG util.py:446:  openldap-2.4.46-17.el8_4.x86_64
+DEBUG util.py:446:  guile-2.0.14-7.el8.x86_64
+DEBUG util.py:446:  libutempter-1.1.6-14.el8.x86_64
+DEBUG util.py:446:  openssh-8.0p1-6.el8_4.2.x86_64
+DEBUG util.py:446:  libarchive-3.3.3-1.el8.x86_64
+DEBUG util.py:446:  ima-evm-utils-1.3.2-12.el8.x86_64
+DEBUG util.py:446:  gnupg2-2.2.20-2.el8.x86_64
+DEBUG util.py:446:  libssh-0.9.4-2.el8.x86_64
+DEBUG util.py:446:  curl-7.61.1-18.el8.x86_64
+DEBUG util.py:446:  rpm-libs-4.14.3-14.el8_4.x86_64
+DEBUG util.py:446:  rpm-build-libs-4.14.3-14.el8_4.x86_64
+DEBUG util.py:446:  kernel-headers-4.18.0-305.10.2.el8_4.x86_64
+DEBUG util.py:446:  libxcrypt-devel-4.1.1-4.el8.x86_64
+DEBUG util.py:446:  gcc-8.4.1-1.el8.x86_64
+DEBUG util.py:446:  rust-srpm-macros-5-2.el8.noarch
+DEBUG util.py:446:  perl-srpm-macros-1-25.el8.noarch
+DEBUG util.py:446:  ocaml-srpm-macros-5-4.el8.noarch
+DEBUG util.py:446:  ghc-srpm-macros-1.4.2-7.el8.noarch
+DEBUG util.py:446:  rpm-build-4.14.3-14.el8_4.x86_64
+DEBUG util.py:446:  git-core-2.27.0-1.el8.x86_64
+DEBUG util.py:446:  which-2.21-12.el8.x86_64
 DEBUG util.py:598:  Child return code was: 0
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/.initialized
 DEBUG util.py:624:  child environment: None
@@ -526,8 +492,29 @@ DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG file_downloader.py:40:  Local file: /home/sherif/shim_review_1.2/shim-unsigned-x64-15.4-4.el8.1.2.src.rpm
+DEBUG file_downloader.py:40:  Local file: /home/sherif/shim_review_1.3/shim-unsigned-x64-15.4-4.el8.1.3.src.rpm
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root
 DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap
@@ -553,7 +540,7 @@ DEBUG util.py:446:  CPU family:          6
 DEBUG util.py:446:  Model:               158
 DEBUG util.py:446:  Model name:          Intel(R) Core(TM) i7-9850H CPU @ 2.60GHz
 DEBUG util.py:446:  Stepping:            13
-DEBUG util.py:446:  CPU MHz:             2600.658
+DEBUG util.py:446:  CPU MHz:             2600.843
 DEBUG util.py:446:  CPU max MHz:         2600.0000
 DEBUG util.py:446:  CPU min MHz:         800.0000
 DEBUG util.py:446:  BogoMIPS:            5184.00
@@ -568,13 +555,13 @@ DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:446:                total        used        free      shared  buff/cache   available
-DEBUG util.py:446:  Mem:       32504152      339108    29545424       17752     2619620    31679204
+DEBUG util.py:446:  Mem:       32504152      344800    29529248       17752     2630104    31676280
 DEBUG util.py:446:  Swap:      16400380           0    16400380
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/df', '-H', '/var/lib/mock/rocky-8-x86_64-bootstrap/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:446:  Filesystem                   Size  Used Avail Use% Mounted on
-DEBUG util.py:446:  /dev/mapper/vg_mock-lv_data  106G  524M  100G   1% /var/lib/mock
+DEBUG util.py:446:  /dev/mapper/vg_mock-lv_data  106G  528M  100G   1% /var/lib/mock
 DEBUG util.py:598:  Child return code was: 0
 DEBUG buildroot.py:547:  create skeleton dirs
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/rpm
@@ -628,7 +615,7 @@ DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64-bootstrap/ro
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root
-DEBUG file_util.py:17:  ensuring that dir exists: /home/sherif/shim_review_1.2
+DEBUG file_util.py:17:  ensuring that dir exists: /home/sherif/shim_review_1.3
 INFO buildroot.py:168:  calling preinit hooks
 DEBUG file_util.py:17:  ensuring that dir exists: /var/cache/mock/rocky-8-x86_64/root_cache/
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root
@@ -667,7 +654,7 @@ DEBUG util.py:446:  CPU family:          6
 DEBUG util.py:446:  Model:               158
 DEBUG util.py:446:  Model name:          Intel(R) Core(TM) i7-9850H CPU @ 2.60GHz
 DEBUG util.py:446:  Stepping:            13
-DEBUG util.py:446:  CPU MHz:             2601.037
+DEBUG util.py:446:  CPU MHz:             2600.744
 DEBUG util.py:446:  CPU max MHz:         2600.0000
 DEBUG util.py:446:  CPU min MHz:         800.0000
 DEBUG util.py:446:  BogoMIPS:            5184.00
@@ -682,7 +669,7 @@ DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/free'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:446:                total        used        free      shared  buff/cache   available
-DEBUG util.py:446:  Mem:       32504152      339536    28814136       17752     3350480    31678460
+DEBUG util.py:446:  Mem:       32504152      345092    28791428       17752     3367632    31672916
 DEBUG util.py:446:  Swap:      16400380           0    16400380
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
@@ -717,77 +704,6 @@ DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/fst
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/yum/yum.conf
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/etc/dnf/dnf.conf
 DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/var/log/yum.log
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/yum
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/yum_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/dnf
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/dnf_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/proc
-DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/proc/filesystems
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.r00g2wn_', '/var/lib/mock/rocky-8-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private', 'tmpfs', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG buildroot.py:195:  rootdir = /var/lib/mock/rocky-8-x86_64/root
-DEBUG buildroot.py:196:  resultdir = /home/sherif/shim_review_1.2
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/pki/mock
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/dnf
-DEBUG package_manager.py:570:  configure DNF vars
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '68c0758b2c6c4fb5ad715dd8170c7871', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/userdel', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '77fac6474d1e4825ba744768b357a2ce', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupdel', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', 'aa618be50430438e95a22272eab6e0d1', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/groupadd', '-g', '135', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '5338dd08242247269ba554891dbef52d', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/usr/sbin/useradd', '-o', '-m', '-u', '1001', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:444:  useradd: warning: the home directory already exists.
-DEBUG util.py:444:  Not copying any file from skel directory into it.
-DEBUG util.py:444:  Creating mailbox file: File exists
-DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
-DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir
-DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/.initialized
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qxzm0dms:/etc/resolv.conf', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11']
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '54f0430746424acfb6a13f34e320c92f', '-D', '/var/lib/mock/rocky-8-x86_64/root', '-a', '-u', 'mockbuild', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.qxzm0dms:/etc/resolv.conf', '--bind=/dev/loop-control', '--bind=/dev/loop0', '--bind=/dev/loop1', '--bind=/dev/loop2', '--bind=/dev/loop3', '--bind=/dev/loop4', '--bind=/dev/loop5', '--bind=/dev/loop6', '--bind=/dev/loop7', '--bind=/dev/loop8', '--bind=/dev/loop9', '--bind=/dev/loop10', '--bind=/dev/loop11', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-15.4-4.el8.1.2.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
-DEBUG util.py:446:  Updating / installing...
-DEBUG util.py:446:  shim-unsigned-x64-15.4-4.el8.1.2      ########################################
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
 DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/proc
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'rprivate', 'tmpfs', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
@@ -822,17 +738,79 @@ DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/r
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
-DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/installation-homedir
-DEBUG package_manager.py:197:  ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=local', '--disableplugin=spacewalk', '/var/lib/mock/rocky-8-x86_64/root//builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.2.src.rpm']
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/yum
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args ['--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.70w8qu1q:/etc/resolv.conf']
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '454ce32fef7e4978a51246ff58b9681a', '-D', '/var/lib/mock/rocky-8-x86_64-bootstrap/root', '-a', '--capability=cap_ipc_lock', '--bind=/tmp/mock-resolv.70w8qu1q:/etc/resolv.conf', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/var/lib/mock/rocky-8-x86_64/root/installation-homedir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--setenv=LC_MESSAGES=C.UTF-8', '--resolv-conf=off', '/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=local', '--disableplugin=spacewalk', '/var/lib/mock/rocky-8-x86_64/root//builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.2.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-8-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/yum_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/var/cache/dnf
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/var/cache/mock/rocky-8-x86_64/dnf_cache', '/var/lib/mock/rocky-8-x86_64/root/var/cache/dnf'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'bind', '/tmp/mock-selinux-plugin.0nqv0hup', '/var/lib/mock/rocky-8-x86_64/root/proc/filesystems'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', '-o', 'private', 'tmpfs', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/mount', '-n', '-o', 'remount,private,rbind', '/var/lib/mock/rocky-8-x86_64/root', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/lib/mock/rocky-8-x86_64/root'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG buildroot.py:195:  rootdir = /var/lib/mock/rocky-8-x86_64/root
+DEBUG buildroot.py:196:  resultdir = /home/sherif/shim_review_1.3
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/pki/mock
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/etc/dnf
+DEBUG package_manager.py:570:  configure DNF vars
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/sbin/userdel', '-f', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/sbin/groupdel', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/sbin/groupadd', '-g', '135', 'mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/sbin/useradd', '-o', '-m', '-u', '1001', '-g', '135', '-d', '/builddir', '-n', 'mockbuild'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:444:  useradd: warning: the home directory already exists.
+DEBUG util.py:444:  Not copying any file from skel directory into it.
+DEBUG util.py:444:  Creating mailbox file: File exists
+DEBUG util.py:598:  Child return code was: 0
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/RPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SPECS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SRPMS
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/SOURCES
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILD
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/BUILDROOT
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
+DEBUG file_util.py:20:  creating dir: /var/lib/mock/rocky-8-x86_64/root/builddir/build/originals
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/builddir
+DEBUG file_util.py:30:  touching file: /var/lib/mock/rocky-8-x86_64/root/.initialized
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/rpm', '-Uvh', '--nodeps', '/builddir/build/originals/shim-unsigned-x64-15.4-4.el8.1.3.src.rpm'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:446:  Updating / installing...
+DEBUG util.py:446:  shim-unsigned-x64-15.4-4.el8.1.3      ########################################
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG file_util.py:17:  ensuring that dir exists: /var/lib/mock/rocky-8-x86_64/root/installation-homedir
+DEBUG package_manager.py:197:  ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=local', '--disableplugin=spacewalk', '/var/lib/mock/rocky-8-x86_64/root//builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.3.src.rpm']
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/usr/bin/dnf', 'builddep', '--installroot', '/var/lib/mock/rocky-8-x86_64/root/', '--releasever', '8', '--setopt=deltarpm=False', '--allowerasing', '--disableplugin=local', '--disableplugin=spacewalk', '--disableplugin=local', '--disableplugin=spacewalk', '/var/lib/mock/rocky-8-x86_64/root//builddir/build/SRPMS/shim-unsigned-x64-15.4-4.el8.1.3.src.rpm', '--setopt=tsflags=nocontexts'] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/var/lib/mock/rocky-8-x86_64/root/installation-homedir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'LC_MESSAGES': 'C.UTF-8'} and shell False
 DEBUG util.py:444:  No matches found for the following disable plugin patterns: local, spacewalk
-DEBUG util.py:446:  Rocky Linux 8 - AppStream                                                                                                                                                              17 kB/s | 4.3 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - BaseOS                                                                                                                                                                 16 kB/s | 3.9 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - Extras                                                                                                                                                                 12 kB/s | 3.1 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                             17 kB/s | 4.3 kB     00:00    
-DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                            3.2 MB/s | 2.1 MB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - AppStream                                                                                                                                                              19 kB/s | 4.8 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - BaseOS                                                                                                                                                                 15 kB/s | 4.3 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - Extras                                                                                                                                                                6.9 kB/s | 3.5 kB     00:00    
+DEBUG util.py:446:  Rocky Linux 8 - PowerTools                                                                                                                                                             12 kB/s | 4.8 kB     00:00    
 DEBUG util.py:446:  Package findutils-1:4.6.0-20.el8.x86_64 is already installed.
 DEBUG util.py:446:  Package gcc-8.4.1-1.el8.x86_64 is already installed.
 DEBUG util.py:446:  Package make-1:4.2.1-10.el8.x86_64 is already installed.
@@ -1136,35 +1114,15 @@ DEBUG util.py:446:    perl-libs-4:5.26.3-419.el8.x86_64                         
 DEBUG util.py:446:    perl-threads-1:2.21-2.el8.x86_64                                 perl-threads-shared-1.58-2.el8.x86_64            pesign-0.112-25.el8.x86_64                      zlib-devel-1.2.11-17.el8.x86_64                   
 DEBUG util.py:446:  Complete!
 DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
-DEBUG util.py:624:  child environment: None
-DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
-DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:169:  kill orphans
 DEBUG util.py:624:  child environment: None
-DEBUG util.py:536:  Using nspawn with args None
-DEBUG util.py:542:  Executing command: ['/usr/bin/systemd-nspawn', '-q', '-M', '37ff5a23a7634b79b6a5e36048ceb241', '-D', '/var/lib/mock/rocky-8-x86_64-bootstrap/root', '-a', '--setenv=TERM=vt100', '--setenv=SHELL=/bin/bash', '--setenv=HOME=/builddir', '--setenv=HOSTNAME=mock', '--setenv=PATH=/usr/bin:/bin:/usr/sbin:/sbin', '--setenv=PROMPT_COMMAND=printf "\\033]0;<mock-chroot>\\007"', '--setenv=PS1=<mock-chroot> \\s-\\v\\$ ', '--setenv=LANG=C.UTF-8', '--resolv-conf=off', '/bin/sh', '-c', "rpm -qa --root '/var/lib/mock/rocky-8-x86_64/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\\n'"] with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8', 'SYSTEMD_NSPAWN_TMPFS_TMP': '0'} and shell False
+DEBUG util.py:542:  Executing command: rpm -qa --root '/var/lib/mock/rocky-8-x86_64/root' --qf '%{nevra} %{buildtime} %{size} %{pkgid} installed\n' with env {'TERM': 'vt100', 'SHELL': '/bin/bash', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'PROMPT_COMMAND': 'printf "\\033]0;<mock-chroot>\\007"', 'PS1': '<mock-chroot> \\s-\\v\\$ ', 'LANG': 'C.UTF-8'} and shell True
 DEBUG util.py:446:  libgcc-8.4.1-1.el8.x86_64 1621366032 190208 50c372c57f45d79ac06a99c79ee89346 installed
 DEBUG util.py:446:  python3-setuptools-wheel-39.2.0-6.el8.noarch 1618212295 345256 b740144d0f04426507925fec551c4aba installed
 DEBUG util.py:446:  python-srpm-macros-3-41.el8.noarch 1621392758 4318 daeb57d7b5c3e725fd77a9635b530882 installed
 DEBUG util.py:446:  python3-rpm-macros-3-41.el8.noarch 1621392758 3622 9aca6f983a4a0f298b2789351268c91c installed
+DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch 1625954717 3344 d5a1c5c8e75b96f1b78321814a5dcba7 installed
+DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch 1625954717 13585 2a61caf80dbc305bf7295e6a24bb0727 installed
 DEBUG util.py:446:  filesystem-3.8-3.el8.x86_64 1615750173 0 be2eea72775885f5b26bb9f9ebb7dd19 installed
 DEBUG util.py:446:  publicsuffix-list-dafsa-20180723-1.el8.noarch 1618788965 64502 457968a0f9361415b35124879cfa4751 installed
 DEBUG util.py:446:  ncurses-base-6.1-7.20180224.el8.1.noarch 1623680985 290089 56bce5cda30c0556ffe4fac1eadce97f installed
@@ -1246,45 +1204,44 @@ DEBUG util.py:446:  go-srpm-macros-2-17.el8.noarch 1621391755 7342 26c4633e0aa91
 DEBUG util.py:446:  redhat-rpm-config-125-1.el8.noarch 1621392845 147734 c285e6d4d78a1411130b12ba485504e9 installed
 DEBUG util.py:446:  gcc-c++-8.4.1-1.el8.x86_64 1621366032 32184236 2790f2512a32d8ed01aa2279e318a91c installed
 DEBUG util.py:446:  make-1:4.2.1-10.el8.x86_64 1618202382 1436264 6bc97e8eed3ce22c9a4576838707176b installed
-DEBUG util.py:446:  rocky-gpg-keys-8.4-32.el8.noarch 1625954717 3344 d5a1c5c8e75b96f1b78321814a5dcba7 installed
-DEBUG util.py:446:  rocky-repos-8.4-32.el8.noarch 1625954717 13585 2a61caf80dbc305bf7295e6a24bb0727 installed
-DEBUG util.py:446:  nss-util-3.53.1-17.el8_3.x86_64 1621239263 224844 01399ac689d97cf703004a80a6533200 installed
-DEBUG util.py:446:  nss-softokn-freebl-3.53.1-17.el8_3.x86_64 1621239263 770166 cd1bbdb6460482c4a60855e74eba9c52 installed
-DEBUG util.py:446:  pcre2-utf32-10.32-2.el8.x86_64 1618206256 583294 f92de892004acf050289d3be0bddf771 installed
-DEBUG util.py:446:  pcre2-devel-10.32-2.el8.x86_64 1618206256 1922619 90b74a5fc66a934c68c893b408db417d installed
-DEBUG util.py:446:  libsepol-devel-2.9-2.el8.x86_64 1621392314 129692 dc4ebb0a1aba0175e7a8933a370c6014 installed
-DEBUG util.py:446:  libkadm5-1.18.2-8.el8.x86_64 1621392264 224184 bc36150e05f374dbea9ec05272d8d7f4 installed
-DEBUG util.py:446:  keyutils-libs-devel-1.5.10-6.el8.x86_64 1618196432 33454 e9a1728096ea66040647198c0adb0e9a installed
-DEBUG util.py:446:  groff-base-1.22.3-18.el8.x86_64 1618982724 4031698 9ab3d8fb3221625aa69af6e3f7d841ef installed
-DEBUG util.py:446:  perl-Time-Local-1:1.280-1.el8.noarch 1618209690 59906 ff097284e0d351d41398ae383471bb59 installed
-DEBUG util.py:446:  perl-Term-Cap-1.17-395.el8.noarch 1618209269 29850 ab29575001ba0a8935ae988deb055c40 installed
-DEBUG util.py:446:  perl-HTTP-Tiny-0.074-1.el8.noarch 1618208067 149160 b7ea410e90664c7b2f4861fbabf4fe9c installed
-DEBUG util.py:446:  perl-podlators-4.11-1.el8.noarch 1618210221 287639 ab233ec46f4b2d01e403bd2786b88a38 installed
-DEBUG util.py:446:  perl-Text-ParseWords-3.30-395.el8.noarch 1618209686 13101 79c0ec5d99428703888bc65e34c2b13d installed
-DEBUG util.py:446:  perl-MIME-Base64-3.15-396.el8.x86_64 1618208166 41211 804a5a8ee6f2a051e7caa689f9acdde8 installed
-DEBUG util.py:446:  perl-Getopt-Long-1:2.50-4.el8.noarch 1618207728 139724 2498380d947a04ba1251a4f975bcf767 installed
-DEBUG util.py:446:  perl-Socket-4:2.027-3.el8.x86_64 1618208941 123782 46a01234052c233c6ee13c43cadda917 installed
-DEBUG util.py:446:  perl-Carp-1.42-396.el8.noarch 1618206491 41850 6bc056a9c285aafc427ce4392ef1c704 installed
-DEBUG util.py:446:  perl-libs-4:5.26.3-419.el8.x86_64 1622639664 6105196 90cb4b82ab8376708aaab9f76c9b03e9 installed
-DEBUG util.py:446:  perl-parent-1:0.237-1.el8.noarch 1618210234 9187 df2456aa83aeabce671b37c1b19f2f12 installed
-DEBUG util.py:446:  perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch 1618209572 24825 2b4f13291f5d109d0a809e670dcd709d installed
-DEBUG util.py:446:  perl-File-Path-2.15-2.el8.noarch 1618207332 64920 4102111fabc4afc7056f296956e2a39b installed
-DEBUG util.py:446:  perl-PathTools-3.74-1.el8.x86_64 1618208850 182589 538334a0445a570a6c6aeefbdca872aa installed
-DEBUG util.py:446:  perl-threads-1:2.21-2.el8.x86_64 1618210261 108923 acdb07724316041b74a4b9dcade44c34 installed
-DEBUG util.py:446:  perl-interpreter-4:5.26.3-419.el8.x86_64 1622639664 14390083 8fa90f8316aeb88904bdc447a90ff4de installed
-DEBUG util.py:446:  perl-TermReadKey-2.37-7.el8.x86_64 1618209287 65973 cc68d15fe47924e9a575526fe2eb8e3c installed
-DEBUG util.py:446:  efivar-libs-37-4.el8.x86_64 1617759290 277152 a7517d9c1746542978c5b5a4123ba292 installed
-DEBUG util.py:446:  nss-3.53.1-17.el8_3.x86_64 1621239263 1996254 a005fdd74b0220f1401011df29aa33f4 installed
-DEBUG util.py:446:  nss-tools-3.53.1-17.el8_3.x86_64 1621239263 2286893 161b7086d70bcb49b169102a796c17ae installed
-DEBUG util.py:446:  perl-Git-2.27.0-1.el8.noarch 1618192843 64826 b6b1dafdae947703444bd57bc900f9d6 installed
-DEBUG util.py:446:  pesign-0.112-25.el8.x86_64 1622067397 1120824 824b25b1f83fc892e71d115dbf45eb19 installed
-DEBUG util.py:446:  elfutils-libelf-devel-0.182-3.el8.x86_64 1621391535 34378 efebc86b3aadb3c776d9e68a89fabaf2 installed
-DEBUG util.py:446:  dos2unix-7.4.0-3.el8.x86_64 1618189443 679290 9218770aa239d7b84f60ab3e65794ed3 installed
+DEBUG util.py:446:  nspr-4.25.0-2.el8_2.x86_64 1620025295 317350 b8afd1feb7b2dcafcb9f4303614a1e41 installed
+DEBUG util.py:446:  zlib-devel-1.2.11-17.el8.x86_64 1621393338 141078 0a3a19b452f7935e6065902d6ac9c124 installed
+DEBUG util.py:446:  nss-softokn-3.53.1-17.el8_3.x86_64 1621239263 1930526 dff2a94b12b345fe2f11468f2537b517 installed
+DEBUG util.py:446:  pcre2-utf16-10.32-2.el8.x86_64 1618206256 599702 ae915d1f452dc72bb14230d43f16e433 installed
+DEBUG util.py:446:  libverto-devel-0.3.0-5.el8.x86_64 1618201335 26296 61b0d39f1a3d60994e2099ad0ab64719 installed
+DEBUG util.py:446:  libselinux-devel-2.9-5.el8.x86_64 1621392353 192379 299a69622077a8df29cdbe959ef3f12f installed
+DEBUG util.py:446:  libcom_err-devel-1.45.6-1.el8.1.x86_64 1623682448 17058 0f4b10ae16788d2e0a5224142ddb18e4 installed
+DEBUG util.py:446:  krb5-devel-1.18.2-8.el8.x86_64 1621392264 1123048 4b66c78f5b0abe4ca0205d52808d6ce2 installed
+DEBUG util.py:446:  perl-Pod-Escapes-1:1.07-395.el8.noarch 1618208828 25763 4bb599c842af10daf683ffd89c2c14df installed
+DEBUG util.py:446:  perl-Term-ANSIColor-4.06-396.el8.noarch 1618209251 89627 3c733a3f291bb6239dafb541c4d4ae77 installed
+DEBUG util.py:446:  perl-File-Temp-0.230.600-1.el8.noarch 1618207739 164723 de1c0b2cd74a1b6b91d4244cf485faa6 installed
+DEBUG util.py:446:  perl-Pod-Simple-1:3.35-395.el8.noarch 1618208900 543719 cefa90b0a9c8f4653005d3f36e4de9be installed
+DEBUG util.py:446:  perl-Pod-Perldoc-3.28-396.el8.noarch 1618208878 169228 07442371cd7a73c934314fbe72a9d7d9 installed
+DEBUG util.py:446:  perl-Pod-Usage-4:1.69-395.el8.noarch 1618208955 49719 ef0c0db41568761b520120b1682a2df7 installed
+DEBUG util.py:446:  perl-Storable-1:3.11-3.el8.x86_64 1618209194 221660 a0f7dd568dfa6f6d622581555e47ccbe installed
+DEBUG util.py:446:  perl-Errno-0:1.28-419.el8.x86_64 1622639664 9505 d56391c603891cfd32df1d23724f9833 installed
+DEBUG util.py:446:  perl-Encode-4:2.97-3.el8.x86_64 1618207088 10187639 a02f998015a4c58a8851a0e3329dfcb4 installed
+DEBUG util.py:446:  perl-Exporter-5.72-396.el8.noarch 1618207103 55718 47c3edf5c7c15cb8528cf27d84802aaa installed
+DEBUG util.py:446:  perl-Scalar-List-Utils-3:1.49-2.el8.x86_64 1618209043 124384 0944b379308c3eebc27b6998af126651 installed
+DEBUG util.py:446:  perl-macros-4:5.26.3-419.el8.x86_64 1622639664 5184 c1efd843063db0e9efeb74058fb6058c installed
+DEBUG util.py:446:  perl-Unicode-Normalize-1.25-396.el8.x86_64 1618209831 637277 8930f9acb937eda264c5f0a3bbe84143 installed
+DEBUG util.py:446:  perl-IO-0:1.38-419.el8.x86_64 1622639664 139727 3275c932f91e967b2e97b27f087b7d9b installed
+DEBUG util.py:446:  perl-constant-1.33-396.el8.noarch 1618209988 27104 69d6bcc67536c2150263ad5fb0950ec5 installed
+DEBUG util.py:446:  perl-threads-shared-1.58-2.el8.x86_64 1618210293 77970 018bb36144f23ab11f0e9c14de6d46cb installed
+DEBUG util.py:446:  perl-Error-1:0.17025-2.el8.noarch 1618767972 71564 087b9a92829568751b62b5ec8655d259 installed
+DEBUG util.py:446:  emacs-filesystem-1:26.1-5.el8.noarch 1618978972 0 54d298088087a0e2db5f02d313f30ac1 installed
+DEBUG util.py:446:  crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch 1621220613 128712 3f962f6fa7126b5e9a27cb4457f55017 installed
+DEBUG util.py:446:  nss-sysinit-3.53.1-17.el8_3.x86_64 1621239263 14408 5eb95640614799230876fe0c0dbe02b7 installed
+DEBUG util.py:446:  git-core-doc-2.27.0-1.el8.noarch 1618192843 12482794 1da1446930031367e7e948b7cee913bc installed
+DEBUG util.py:446:  git-2.27.0-1.el8.x86_64 1618192843 377031 f7afb37b1919f892a50da4b7f3182936 installed
+DEBUG util.py:446:  openssl-devel-1:1.1.1g-15.el8_3.x86_64 1621221109 3538081 ca7e47f5b9be8d8e5c8152b5818a5292 installed
+DEBUG util.py:446:  openssl-1:1.1.1g-15.el8_3.x86_64 1621221109 1183992 39fb04dea46ae0651f6f4238375e5d7e installed
 DEBUG util.py:446:  gpg-pubkey-6d745a60-60287f36 1613266742 0 (none) installed
 DEBUG util.py:446:  crypto-policies-20210209-1.gitbfb6bed.el8_3.noarch 1621220613 73054 b0490f517bab493713e9c02612627851 installed
 DEBUG util.py:446:  python3-pip-wheel-9.0.3-19.el8.rocky.noarch 1622882622 1108224 f365cb2197c1084bfc6ab8e355ff2267 installed
 DEBUG util.py:446:  python-rpm-macros-3-41.el8.noarch 1621392758 4325 e4d2f4670326a25234d5a3192a5bec3d installed
 DEBUG util.py:446:  tzdata-2021a-1.el8.noarch 1618216761 1911281 97340ad7c7d5501ef09a2523bc76ba1d installed
+DEBUG util.py:446:  rocky-release-8.4-32.el8.noarch 1625954717 17058 9068d97f7ff0b52ddb86677cbf6ed679 installed
 DEBUG util.py:446:  setup-2.12.2-6.el8.noarch 1615762300 724837 d1f068429f9d2ac091c4586f2e8b2a30 installed
 DEBUG util.py:446:  basesystem-11-5.el8.noarch 1615749940 0 35e3e1ffde688fbb9c7c595333a3abea installed
 DEBUG util.py:446:  pkgconf-m4-1.4.2-1.el8.noarch 1618788815 14187 6139b363940666ca319f4ded92c7ed83 installed
@@ -1338,7 +1295,7 @@ DEBUG util.py:446:  openssl-libs-1:1.1.1g-15.el8_3.x86_64 1621221109 3757184 564
 DEBUG util.py:446:  ca-certificates-2020.2.41-80.0.el8_2.noarch 1620025170 949009 24f98d97329a12eb3596ad04dd4d6314 installed
 DEBUG util.py:446:  krb5-libs-1.18.2-8.el8.x86_64 1621392264 2233875 767c861df551d3c4d91945e0f98cb0e3 installed
 DEBUG util.py:446:  libblkid-2.32.1-27.el8.x86_64 1621393265 343960 8411a4d717740899b7961d3e925ea759 installed
-DEBUG util.py:446:  systemd-libs-239-45.el8_4.1.x86_64 1624987942 4540670 b9b83f1814a50fb189bd2606537ca08f installed
+DEBUG util.py:446:  systemd-libs-239-45.el8_4.2.x86_64 1626814765 4540462 2472ee9bd53aa784c1a7a237fe69c921 installed
 DEBUG util.py:446:  platform-python-setuptools-39.2.0-6.el8.noarch 1618212295 2923789 ab2561475d29c05d5263dd14bf65a041 installed
 DEBUG util.py:446:  python3-libs-3.6.8-37.el8.rocky.x86_64 1621395573 32362311 2edf068c50e87b5d51b276751ff2da6a installed
 DEBUG util.py:446:  gzip-1.9-12.el8.x86_64 1621391952 353163 36410644140f40522a816f3a6181767d installed
@@ -1357,7 +1314,7 @@ DEBUG util.py:446:  libssh-0.9.4-2.el8.x86_64 1618200813 517057 296f2a9bf868df68
 DEBUG util.py:446:  curl-7.61.1-18.el8.x86_64 1621392747 709429 78ffa2676f1c6e7c8c7e82d092958dfe installed
 DEBUG util.py:446:  rpm-libs-4.14.3-14.el8_4.x86_64 1624988013 727080 3485196a447a6eb648afedf7b18acd5a installed
 DEBUG util.py:446:  rpm-build-libs-4.14.3-14.el8_4.x86_64 1624988013 216176 bc9384cee033d0fab2d74eacde10dcd2 installed
-DEBUG util.py:446:  kernel-headers-4.18.0-305.7.1.el8_4.x86_64 1624995265 5208119 f5dccffa1d25d8567fae8b77880f5442 installed
+DEBUG util.py:446:  kernel-headers-4.18.0-305.10.2.el8_4.x86_64 1626814023 5208120 1215adcad494a89d8db8d73a7decc67d installed
 DEBUG util.py:446:  libxcrypt-devel-4.1.1-4.el8.x86_64 1618201599 24771 232e43d17a7e24b4bf1ef68a54e43e46 installed
 DEBUG util.py:446:  gcc-8.4.1-1.el8.x86_64 1621366032 61733794 ab15a59c6cd90bef81dc2fab0229d21d installed
 DEBUG util.py:446:  rust-srpm-macros-5-2.el8.noarch 1618214148 1131 21b4bf88cc7cccd6dd167a530e7af306 installed
@@ -1367,39 +1324,38 @@ DEBUG util.py:446:  ghc-srpm-macros-1.4.2-7.el8.noarch 1618191330 414 783d436a1a
 DEBUG util.py:446:  rpm-build-4.14.3-14.el8_4.x86_64 1624988013 298958 264139ea64995ae3acc383b2cda0298f installed
 DEBUG util.py:446:  git-core-2.27.0-1.el8.x86_64 1618192843 34013485 3b29cafefa7a53f95d6c73d25a280af9 installed
 DEBUG util.py:446:  which-2.21-12.el8.x86_64 1618217686 83205 191d5d6a4fbe26076fb3f695f9be8cdd installed
-DEBUG util.py:446:  rocky-release-8.4-32.el8.noarch 1625954717 17058 9068d97f7ff0b52ddb86677cbf6ed679 installed
-DEBUG util.py:446:  nspr-4.25.0-2.el8_2.x86_64 1620025295 317350 b8afd1feb7b2dcafcb9f4303614a1e41 installed
-DEBUG util.py:446:  zlib-devel-1.2.11-17.el8.x86_64 1621393338 141078 0a3a19b452f7935e6065902d6ac9c124 installed
-DEBUG util.py:446:  nss-softokn-3.53.1-17.el8_3.x86_64 1621239263 1930526 dff2a94b12b345fe2f11468f2537b517 installed
-DEBUG util.py:446:  pcre2-utf16-10.32-2.el8.x86_64 1618206256 599702 ae915d1f452dc72bb14230d43f16e433 installed
-DEBUG util.py:446:  libverto-devel-0.3.0-5.el8.x86_64 1618201335 26296 61b0d39f1a3d60994e2099ad0ab64719 installed
-DEBUG util.py:446:  libselinux-devel-2.9-5.el8.x86_64 1621392353 192379 299a69622077a8df29cdbe959ef3f12f installed
-DEBUG util.py:446:  libcom_err-devel-1.45.6-1.el8.1.x86_64 1623682448 17058 0f4b10ae16788d2e0a5224142ddb18e4 installed
-DEBUG util.py:446:  krb5-devel-1.18.2-8.el8.x86_64 1621392264 1123048 4b66c78f5b0abe4ca0205d52808d6ce2 installed
-DEBUG util.py:446:  perl-Pod-Escapes-1:1.07-395.el8.noarch 1618208828 25763 4bb599c842af10daf683ffd89c2c14df installed
-DEBUG util.py:446:  perl-Term-ANSIColor-4.06-396.el8.noarch 1618209251 89627 3c733a3f291bb6239dafb541c4d4ae77 installed
-DEBUG util.py:446:  perl-File-Temp-0.230.600-1.el8.noarch 1618207739 164723 de1c0b2cd74a1b6b91d4244cf485faa6 installed
-DEBUG util.py:446:  perl-Pod-Simple-1:3.35-395.el8.noarch 1618208900 543719 cefa90b0a9c8f4653005d3f36e4de9be installed
-DEBUG util.py:446:  perl-Pod-Perldoc-3.28-396.el8.noarch 1618208878 169228 07442371cd7a73c934314fbe72a9d7d9 installed
-DEBUG util.py:446:  perl-Pod-Usage-4:1.69-395.el8.noarch 1618208955 49719 ef0c0db41568761b520120b1682a2df7 installed
-DEBUG util.py:446:  perl-Storable-1:3.11-3.el8.x86_64 1618209194 221660 a0f7dd568dfa6f6d622581555e47ccbe installed
-DEBUG util.py:446:  perl-Errno-0:1.28-419.el8.x86_64 1622639664 9505 d56391c603891cfd32df1d23724f9833 installed
-DEBUG util.py:446:  perl-Encode-4:2.97-3.el8.x86_64 1618207088 10187639 a02f998015a4c58a8851a0e3329dfcb4 installed
-DEBUG util.py:446:  perl-Exporter-5.72-396.el8.noarch 1618207103 55718 47c3edf5c7c15cb8528cf27d84802aaa installed
-DEBUG util.py:446:  perl-Scalar-List-Utils-3:1.49-2.el8.x86_64 1618209043 124384 0944b379308c3eebc27b6998af126651 installed
-DEBUG util.py:446:  perl-macros-4:5.26.3-419.el8.x86_64 1622639664 5184 c1efd843063db0e9efeb74058fb6058c installed
-DEBUG util.py:446:  perl-Unicode-Normalize-1.25-396.el8.x86_64 1618209831 637277 8930f9acb937eda264c5f0a3bbe84143 installed
-DEBUG util.py:446:  perl-IO-0:1.38-419.el8.x86_64 1622639664 139727 3275c932f91e967b2e97b27f087b7d9b installed
-DEBUG util.py:446:  perl-constant-1.33-396.el8.noarch 1618209988 27104 69d6bcc67536c2150263ad5fb0950ec5 installed
-DEBUG util.py:446:  perl-threads-shared-1.58-2.el8.x86_64 1618210293 77970 018bb36144f23ab11f0e9c14de6d46cb installed
-DEBUG util.py:446:  perl-Error-1:0.17025-2.el8.noarch 1618767972 71564 087b9a92829568751b62b5ec8655d259 installed
-DEBUG util.py:446:  emacs-filesystem-1:26.1-5.el8.noarch 1618978972 0 54d298088087a0e2db5f02d313f30ac1 installed
-DEBUG util.py:446:  crypto-policies-scripts-20210209-1.gitbfb6bed.el8_3.noarch 1621220613 128712 3f962f6fa7126b5e9a27cb4457f55017 installed
-DEBUG util.py:446:  nss-sysinit-3.53.1-17.el8_3.x86_64 1621239263 14408 5eb95640614799230876fe0c0dbe02b7 installed
-DEBUG util.py:446:  git-core-doc-2.27.0-1.el8.noarch 1618192843 12482794 1da1446930031367e7e948b7cee913bc installed
-DEBUG util.py:446:  git-2.27.0-1.el8.x86_64 1618192843 377031 f7afb37b1919f892a50da4b7f3182936 installed
-DEBUG util.py:446:  openssl-devel-1:1.1.1g-15.el8_3.x86_64 1621221109 3538081 ca7e47f5b9be8d8e5c8152b5818a5292 installed
-DEBUG util.py:446:  openssl-1:1.1.1g-15.el8_3.x86_64 1621221109 1183992 39fb04dea46ae0651f6f4238375e5d7e installed
+DEBUG util.py:446:  nss-util-3.53.1-17.el8_3.x86_64 1621239263 224844 01399ac689d97cf703004a80a6533200 installed
+DEBUG util.py:446:  nss-softokn-freebl-3.53.1-17.el8_3.x86_64 1621239263 770166 cd1bbdb6460482c4a60855e74eba9c52 installed
+DEBUG util.py:446:  pcre2-utf32-10.32-2.el8.x86_64 1618206256 583294 f92de892004acf050289d3be0bddf771 installed
+DEBUG util.py:446:  pcre2-devel-10.32-2.el8.x86_64 1618206256 1922619 90b74a5fc66a934c68c893b408db417d installed
+DEBUG util.py:446:  libsepol-devel-2.9-2.el8.x86_64 1621392314 129692 dc4ebb0a1aba0175e7a8933a370c6014 installed
+DEBUG util.py:446:  libkadm5-1.18.2-8.el8.x86_64 1621392264 224184 bc36150e05f374dbea9ec05272d8d7f4 installed
+DEBUG util.py:446:  keyutils-libs-devel-1.5.10-6.el8.x86_64 1618196432 33454 e9a1728096ea66040647198c0adb0e9a installed
+DEBUG util.py:446:  groff-base-1.22.3-18.el8.x86_64 1618982724 4031698 9ab3d8fb3221625aa69af6e3f7d841ef installed
+DEBUG util.py:446:  perl-Time-Local-1:1.280-1.el8.noarch 1618209690 59906 ff097284e0d351d41398ae383471bb59 installed
+DEBUG util.py:446:  perl-Term-Cap-1.17-395.el8.noarch 1618209269 29850 ab29575001ba0a8935ae988deb055c40 installed
+DEBUG util.py:446:  perl-HTTP-Tiny-0.074-1.el8.noarch 1618208067 149160 b7ea410e90664c7b2f4861fbabf4fe9c installed
+DEBUG util.py:446:  perl-podlators-4.11-1.el8.noarch 1618210221 287639 ab233ec46f4b2d01e403bd2786b88a38 installed
+DEBUG util.py:446:  perl-Text-ParseWords-3.30-395.el8.noarch 1618209686 13101 79c0ec5d99428703888bc65e34c2b13d installed
+DEBUG util.py:446:  perl-MIME-Base64-3.15-396.el8.x86_64 1618208166 41211 804a5a8ee6f2a051e7caa689f9acdde8 installed
+DEBUG util.py:446:  perl-Getopt-Long-1:2.50-4.el8.noarch 1618207728 139724 2498380d947a04ba1251a4f975bcf767 installed
+DEBUG util.py:446:  perl-Socket-4:2.027-3.el8.x86_64 1618208941 123782 46a01234052c233c6ee13c43cadda917 installed
+DEBUG util.py:446:  perl-Carp-1.42-396.el8.noarch 1618206491 41850 6bc056a9c285aafc427ce4392ef1c704 installed
+DEBUG util.py:446:  perl-libs-4:5.26.3-419.el8.x86_64 1622639664 6105196 90cb4b82ab8376708aaab9f76c9b03e9 installed
+DEBUG util.py:446:  perl-parent-1:0.237-1.el8.noarch 1618210234 9187 df2456aa83aeabce671b37c1b19f2f12 installed
+DEBUG util.py:446:  perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch 1618209572 24825 2b4f13291f5d109d0a809e670dcd709d installed
+DEBUG util.py:446:  perl-File-Path-2.15-2.el8.noarch 1618207332 64920 4102111fabc4afc7056f296956e2a39b installed
+DEBUG util.py:446:  perl-PathTools-3.74-1.el8.x86_64 1618208850 182589 538334a0445a570a6c6aeefbdca872aa installed
+DEBUG util.py:446:  perl-threads-1:2.21-2.el8.x86_64 1618210261 108923 acdb07724316041b74a4b9dcade44c34 installed
+DEBUG util.py:446:  perl-interpreter-4:5.26.3-419.el8.x86_64 1622639664 14390083 8fa90f8316aeb88904bdc447a90ff4de installed
+DEBUG util.py:446:  perl-TermReadKey-2.37-7.el8.x86_64 1618209287 65973 cc68d15fe47924e9a575526fe2eb8e3c installed
+DEBUG util.py:446:  efivar-libs-37-4.el8.x86_64 1617759290 277152 a7517d9c1746542978c5b5a4123ba292 installed
+DEBUG util.py:446:  nss-3.53.1-17.el8_3.x86_64 1621239263 1996254 a005fdd74b0220f1401011df29aa33f4 installed
+DEBUG util.py:446:  nss-tools-3.53.1-17.el8_3.x86_64 1621239263 2286893 161b7086d70bcb49b169102a796c17ae installed
+DEBUG util.py:446:  perl-Git-2.27.0-1.el8.noarch 1618192843 64826 b6b1dafdae947703444bd57bc900f9d6 installed
+DEBUG util.py:446:  pesign-0.112-25.el8.x86_64 1622067397 1120824 824b25b1f83fc892e71d115dbf45eb19 installed
+DEBUG util.py:446:  elfutils-libelf-devel-0.182-3.el8.x86_64 1621391535 34378 efebc86b3aadb3c776d9e68a89fabaf2 installed
+DEBUG util.py:446:  dos2unix-7.4.0-3.el8.x86_64 1618189443 679290 9218770aa239d7b84f60ab3e65794ed3 installed
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
 DEBUG backend.py:772:  Copying packages to result dir
@@ -1420,6 +1376,27 @@ DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-8-x86_64/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:169:  kill orphans
 DEBUG util.py:624:  child environment: None
@@ -1430,4 +1407,25 @@ DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rock
 DEBUG util.py:598:  Child return code was: 0
 DEBUG util.py:624:  child environment: None
 DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/var/cache/yum'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/sys/fs/selinux'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/dev/pts'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/dev/shm'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/sys'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
+DEBUG util.py:598:  Child return code was: 0
+DEBUG util.py:624:  child environment: None
+DEBUG util.py:542:  Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/rocky-8-x86_64-bootstrap/root/proc'] with env {'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOME': '/builddir', 'HOSTNAME': 'mock', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'LANG': 'C.UTF-8'} and shell False
 DEBUG util.py:598:  Child return code was: 0

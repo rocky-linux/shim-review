@@ -78,6 +78,27 @@ Few patch based on issue https://github.com/rhboot/shim-review/issues/165:
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0008-SBAT.md-trivial-fixes.patch
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0009-SBAT.md-fix-will-should.patch
 - https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0010-shim-another-attempt-to-fix-load-options-handling.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0011-.gitignore-ignore-.gdb-not-just-.gdbinit.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0012-shim-rename-pause-to-wait_for_debug.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0013-test.h-make-some-of-the-asserts-a-little-more-friend.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0014-test.h-add-some-decls-for-some-of-the-stuff-in-efili.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0015-test.c-Conditionally-do-not-declare-stuff-that-s-in-.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0016-Make-test-cases-link-against-libefi.a.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0017-test.c-add-some-simple-mock-functions-for-BS-Allocat.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0018-test.h-add-assert_not_equal_.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0019-test-Add-a-basic-traceback-printer.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0020-shim-move-the-bulk-of-set_second_stage-to-its-own-fi.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0021-Add-a-tester-for-parse_load_options.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0022-shim-don-t-fail-on-the-odd-LoadOptions-length.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0023-arm-aa64-fix-the-size-of-.rela-sections.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0024-mok-fix-potential-buffer-overrun-in-import_mok_state.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0025-mok-relax-the-maximum-variable-size-check.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/0026-Don-t-unhook-ExitBootServices-when-EBS-protection-is.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/PR393-1.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/PR393-2.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/PR396.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/PR399-1.patch
+- https://git.rockylinux.org/staging/rpms/shim-unsigned-x64/-/blob/r8/SOURCES/PR399-2.patch
 
 -------------------------------------------------------------------------------
 If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632,
