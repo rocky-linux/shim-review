@@ -1,4 +1,4 @@
-FROM rockylinux/rockylinux-shim:8-154
+FROM rockylinux/rockylinux-shim:8-154.3
 
 ENV SHIM_VERSION 15.4-4.el8.1.3
 
