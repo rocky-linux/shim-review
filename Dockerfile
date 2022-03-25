@@ -3,7 +3,7 @@ FROM rockylinux/rockylinux-shim:8-155
 ENV SHIM_VERSION 15.5-1.el8
 
 COPY rpmmacros /root/.rpmmacros
-RUN wget https://github.com/rocky-linux/shim-review/raw/master/shim-unsigned-x64-$SHIM_VERSION.src.rpm
+RUN wget https://github.com/rocky-linux/shim-review/raw/rockylinux-8-shim-x86_64-20220325/shim-unsigned-x64-$SHIM_VERSION.src.rpm
 RUN rpm -ivh shim-unsigned-x64-$SHIM_VERSION.src.rpm
 RUN sed -i 's/linux32 -B/linux32/g' /builddir/build/SPECS/shim-unsigned-x64.spec
 RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-x64.spec
