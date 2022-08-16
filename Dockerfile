@@ -2,7 +2,7 @@ FROM  rockylinux/rockylinux:9
 
 ENV SHIM_VERSION 15.6-1.el9.rocky.1
 COPY rpmmacros /root/.rpmmacros
-RUN wget https://github.com/rocky-linux/shim-review/raw/rockylinux-9-shim-15.6-x86_64-20220816/shim-unsigned-x64-$SHIM_VERSION.src.rpm
+COPY shim-unsigned-x64-$SHIM_VERSION.src.rpm /
 RUN rpm -ivh shim-unsigned-x64-$SHIM_VERSION.src.rpm
 RUN dnf install -y dnf-plugins-core rpm-build
 RUN dnf builddep -y  /builddir/build/SPECS/shim-unsigned-x64.spec
