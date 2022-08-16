@@ -8,8 +8,8 @@ This repo is for review of requests for signing shim.  To create a request for r
 - commit all of that
 - tag it with a tag of the form "myorg-shim-arch-YYYYMMDD"
 - push that to github
-- file an issue at https://github.com/rhboot/shim-review/issues with a link to your branch
-- approval is ready when you have accepted tag
+- file an issue at https://github.com/rhboot/shim-review/issues with a link to your tag
+- approval is ready when the "accepted" label is added to your issue
 
 Note that we really only have experience with using GRUB2 on Linux, so asking
 us to endorse anything else for signing is going to require some convincing on
@@ -34,6 +34,11 @@ Here's the template:
 
 -------------------------------------------------------------------------------
 ### Who is the primary contact for security updates, etc.?
+The security contacts need to be verified before the shim can be accepted. For subsequent requests, contact verification is only necessary if the security contacts or their PGP keys have changed since the last successful verification.
+
+An authorized reviewer will initiate contact verification by sending each security contact a PGP-encrypted email containing random words.
+You will be asked to post the contents of these mails in your `shim-review` issue to prove ownership of the email addresses and PGP keys.
+
 -------------------------------------------------------------------------------
 - Name:
 - Position:
@@ -57,10 +62,13 @@ like keyserver.ubuntu.com, and preferably have signatures that are reasonably
 well known in the Linux community.)
 
 -------------------------------------------------------------------------------
-### Please create your shim binaries starting with the 15.4 shim release tar file: https://github.com/rhboot/shim/releases/download/15.4/shim-15.4.tar.bz2
-### This matches https://github.com/rhboot/shim/releases/tag/15.4 and contains the appropriate gnu-efi source.
+### Were these binaries created from the 15.6 shim release tar?
+Please create your shim binaries starting with the 15.6 shim release tar file: https://github.com/rhboot/shim/releases/download/15.6/shim-15.6.tar.bz2
+
+This matches https://github.com/rhboot/shim/releases/tag/15.6 and contains the appropriate gnu-efi source.
+
 -------------------------------------------------------------------------------
-[Please confirm]
+[your text here]
 
 -------------------------------------------------------------------------------
 ### URL for a repo that contains the exact code which was built to get this binary:
@@ -73,35 +81,47 @@ well known in the Linux community.)
 [your text here]
 
 -------------------------------------------------------------------------------
-### If bootloader, shim loading is, GRUB2: is CVE-2020-14372, CVE-2020-25632, CVE-2020-25647, CVE-2020-27749, CVE-2020-27779, CVE-2021-20225, CVE-2021-20233, CVE-2020-10713, CVE-2020-14308, CVE-2020-14309, CVE-2020-14310, CVE-2020-14311, CVE-2020-15705, and if you are shipping the shim_lock module CVE-2021-3418
--------------------------------------------------------------------------------
-[your text here]
-
-
--------------------------------------------------------------------------------
-### What exact implementation of Secureboot in GRUB2 ( if this is your bootloader ) you have ?
-### * Upstream GRUB2 shim_lock verifier or * Downstream RHEL/Fedora/Debian/Canonical like implementation ?
+### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 -------------------------------------------------------------------------------
 [your text here]
 
 -------------------------------------------------------------------------------
-### If bootloader, shim loading is, GRUB2, and previous shims were trusting affected by CVE-2020-14372, CVE-2020-25632, CVE-2020-25647, CVE-2020-27749, CVE-2020-27779, CVE-2021-20225, CVE-2021-20233, CVE-2020-10713, CVE-2020-14308, CVE-2020-14309, CVE-2020-14310, CVE-2020-14311, CVE-2020-15705, and if you were shipping the shim_lock module CVE-2021-3418 ( July 2020 grub2 CVE list + March 2021 grub2 CVE list ) grub2:
-* were old shims hashes provided to Microsoft for verification
-  and to be added to future DBX update ?
-* Does your new chain of trust disallow booting old, affected by CVE-2020-14372,
-  CVE-2020-25632, CVE-2020-25647, CVE-2020-27749,
-  CVE-2020-27779, CVE-2021-20225, CVE-2021-20233, CVE-2020-10713,
-  CVE-2020-14308, CVE-2020-14309, CVE-2020-14310, CVE-2020-14311, CVE-2020-15705,
-  and if you were shipping the shim_lock module CVE-2021-3418
-  ( July 2020 grub2 CVE list + March 2021 grub2 CVE list )
-  grub2 builds ?
+### If shim is loading GRUB2 bootloader and your previously released shim booted a version of grub affected by any of the CVEs in the July 2020 grub2 CVE list, the March 2021 grub2 CVE list, or the June 7th 2022 grub2 CVE list:
+* CVE-2020-14372
+* CVE-2020-25632
+* CVE-2020-25647
+* CVE-2020-27749
+* CVE-2020-27779
+* CVE-2021-20225
+* CVE-2021-20233
+* CVE-2020-10713
+* CVE-2020-14308
+* CVE-2020-14309
+* CVE-2020-14310
+* CVE-2020-14311
+* CVE-2020-15705
+* CVE-2021-3418 (if you are shipping the shim_lock module)
+
+* CVE-2021-3695
+* CVE-2021-3696
+* CVE-2021-3697
+* CVE-2022-28733
+* CVE-2022-28734
+* CVE-2022-28735
+* CVE-2022-28736
+* CVE-2022-28737
+
+### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
+### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 -------------------------------------------------------------------------------
 [your text here]
 
 -------------------------------------------------------------------------------
-### If your boot chain of trust includes a linux kernel:
+### If your boot chain of trust includes a Linux kernel:
 ### Is upstream commit [1957a85b0032a81e6482ca4aab883643b8dae06e "efi: Restrict efivar_ssdt_load when the kernel is locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=1957a85b0032a81e6482ca4aab883643b8dae06e) applied?
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
+### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
+
 -------------------------------------------------------------------------------
 [your text here]
 
@@ -127,6 +147,68 @@ well known in the Linux community.)
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### What changes were made since your SHIM was last signed?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### What is the SHA256 hash of your final SHIM binary?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### How do you manage and protect the keys used in your SHIM?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### Do you use EV certificates as embedded certificates in the SHIM?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( grub2, fwupd, fwupdate, shim + all child shim binaries )?
+### Please provide exact SBAT entries for all SBAT binaries you are booting or planning to boot directly through shim.
+### Where your code is only slightly modified from an upstream vendor's, please also preserve their SBAT entries to simplify revocation.
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### Which modules are built into your signed grub image?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### What is the origin and full version number of your bootloader (GRUB or other)?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### If your SHIM launches any other components, please provide further details on what is launched.
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### If your GRUB2 launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### How do the launched components prevent execution of unauthenticated code?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB)?
+-------------------------------------------------------------------------------
+[your text here]
+
+-------------------------------------------------------------------------------
+### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 -------------------------------------------------------------------------------
 [your text here]
 
