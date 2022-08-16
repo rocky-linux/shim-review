@@ -196,8 +196,9 @@ grub.rocky,2,Rocky Linux,grub2,2.06-27.el9_0.7,mail:security@rockylinux.org
 
 fwupd:
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd,1,Firmware update daemon,fwupd,1.7.4,https://github.com/fwupd/fwupd
-fwupd.rocky,1,Rocky Linux,fwupd,1.7.4,mail:security@rockylinux.org
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.1,https://github.com/fwupd/fwupd
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.4,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.4,mail:security@rockylinux.org
 ```
 -------------------------------------------------------------------------------
 ### Which modules are built into your signed grub image?
