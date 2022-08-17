@@ -191,7 +191,7 @@ shim.rocky,2,Rocky Linux,shim,15.6,security@rockylinux.org
 
 grub2:
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,2,Free Software Foundation,grub,@@VERSION@@,https//www.gnu.org/software/grub/
+grub,2,Free Software Foundation,grub,2.02-123.el8_6.8,https//www.gnu.org/software/grub/
 grub.rhel8,2,Red Hat Enterprise Linux,grub2,2.02-123.el8_6.8,mail:secalert@redhat.com
 grub.rocky,2,Rocky Linux,grub2,2.02-123.el8_6.8,mail:security@rockylinux.org
 
