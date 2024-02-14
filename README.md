@@ -175,8 +175,8 @@ All mentioned patches are applied
     * gVNIC backports from mainline Linux for google network drivers
     * AMD IOMMU backports from mainline Linux
     * Aarch64 only, changing page size patch for GCP hardware and disabel kABI check
-* SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
-* IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
+    * SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
+    * IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
 * kernel-mainline 6.6, with no source modifications, sources are here: https://git.rockylinux.org/sig/kernel/rpms/kernel-mainline
 
 *******************************************************************************
@@ -215,8 +215,8 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 *******************************************************************************
 * We moved to new HSM FIPS 140-2 level 2 certified module to host the signing keys
 * We are signing and providing secureboot chain packages for arm64 "kernel, grub2, fwupd"
-* We now using separated cert per package per architecture, so grub2 x64 will be signed with a diffrent cert than grub2 arm64 and so on
-* We are signing cloud sig kernel with extra patches backported from mainline kernel "gVNC IMMOU"
+* We now using separated cert per package per architecture, so grub2 x64 will be signed with a different cert than grub2 arm64 and so on
+* We are signing cloud sig kernel with extra patches backported from mainline kernel "gVNC IMMOU" as mentioned above
 * We are signing kernel sig kernel mainline 6.6 with no extra patches from mainline
 
 *******************************************************************************
@@ -244,7 +244,7 @@ from Fedora or Debian), please preserve the SBAT entry from those distributions
 and only append your own. More information on how SBAT works can be found
 [here](https://github.com/rhboot/shim/blob/main/SBAT.md).
 *******************************************************************************
-Kernel-uki-virt:
+Kernel-uki-virt x64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 systemd,1,The systemd Developers,systemd,252,https://systemd.io/
@@ -257,23 +257,23 @@ kernel-uki-virt.rhel,1,Red Hat,kernel-uki-virt,5.14.0-362.18.1.el9_3.0.1.x86_64,
 kernel-uki-virt.rocky,1,RESF,kernel-uki-virt,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugs.rockylinux.org/
 ```
 
-fwupd:
+fwupd x64 and aa64:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.16,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.16,mail:security@rockylinux.org
 ```
 
-grub2 "ia32 and x86_64":
+grub2 x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.02-150.el8,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.02-150.el8.rocky.0.2,mail:security@rockylinux.org
+grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.06-70.el9_3.2,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.2.rocky.0.3,mail:security@rockylinux.org
 ```
 
-shim "x86_64 and aarch64:
+shim x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
