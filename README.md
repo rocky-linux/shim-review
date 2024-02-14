@@ -246,20 +246,20 @@ and only append your own. More information on how SBAT works can be found
 fwupd x64 and aa64:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
-fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
-fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.4,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.8.16,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.8.16,mail:security@rockylinux.org
 ```
 
-grub2 ia32, x64 and aa64:
+grub2 x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
-grub,3,Free Software Foundation,grub,2.02,https//www.gnu.org/software/grub/
-grub.rh,2,Red Hat,grub2,2.02-150.el8,mailto:secalert@redhat.com
-grub.rocky,2,Rocky Linux,grub2,2.02-150.el8.rocky.0.2,mail:security@rockylinux.org
+grub,3,Free Software Foundation,grub,2.06,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.06-70.el9_3.2,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.06-70.el9_3.2.rocky.0.3,mail:security@rockylinux.org
 ```
 
-shim ia32, x64 and aa64:
+shim x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
@@ -269,20 +269,11 @@ shim.rocky,3,Rocky Linux,shim,15.8,security@rockylinux.org
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
-all_video boot blscfg
-cat configfile cryptodisk echo ext2		
-fat font gcry_rijndael gcry_rsa gcry_serpent	
-gcry_sha256 gcry_twofish gcry_whirlpool		
-gfxmenu gfxterm gzio halt http			
-increment iso9660 jpeg loadenv loopback linux	
-lvm luks mdraid09 mdraid1x minicmd net		
-normal part_apple part_msdos part_gpt		
-password_pbkdf2 png reboot regexp search	
-search_fs_uuid search_fs_file search_label	
-serial sleep syslinuxcfg test tftp video xfs
-efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
-backtrace chain usb usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
+For x64:
+all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm luks luks2 mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt password_pbkdf2 pgp png reboot regexp search search_fs_uuid search_fs_file search_label serial sleep syslinuxcfg test tftp version video xfs zstd efi_netfs efifwsetup efinet lsefi lsefimmap connectefi backtrace chain tpm usb usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
 
+For aa64:
+all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm luks luks2 mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt password_pbkdf2 pgp png reboot regexp search search_fs_uuid search_fs_file search_label serial sleep syslinuxcfg test tftp version video xfs zstd efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
 *******************************************************************************
