@@ -28,7 +28,7 @@ Rocky Enterprise Software Foundation
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Rocky Linux 9
+Rocky Linux 8
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -82,9 +82,9 @@ We are using unmodified shim 15.8 release tarball
 *******************************************************************************
 https://github.com/rhboot/shim/tree/15.8 and to achieve reproducibility we are using 
 our 8.9 kickstart repos herem where basearch is x86_86 and aarch64: 
-* https://dl.rockylinux.org/pub/rocky/9/BaseOS/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/9/AppStream/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/9/PowerTools/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/8/BaseOS/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/8/AppStream/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/8/PowerTools/$basearch/kickstart/
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -175,8 +175,8 @@ All mentioned patches are applied
     * gVNIC backports from mainline Linux for google network drivers
     * AMD IOMMU backports from mainline Linux
     * Aarch64 only, changing page size patch for GCP hardware and disabel kABI check
-* SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
-* IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
+    * SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
+    * IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
@@ -200,7 +200,7 @@ Older grub won't be able to boot due to the increase of global generation number
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 ### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
 *******************************************************************************
-Dockerfile is provided to reproduce this build, it will build ia32,x64 and aarch64, might take a bit of time, around 25 minutes or so
+Dockerfile is provided to reproduce this build, it will build ia32, x64 and aarch64, might take a bit of time, around 25 minutes or so
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
@@ -214,8 +214,8 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 *******************************************************************************
 * We moved to new HSM FIPS 140-2 level 2 certified module to host the signing keys
 * We are signing and providing secureboot chain packages for arm64 "kernel, grub2, fwupd"
-* We now using separated cert per package per archtecture, so grub2 x64 will be signed with a diffrent cert than grub2 arm64 and so on
-* We are signing cloud sig kernel with extra patches
+* We now using separated cert per package per architecture, so grub2 x64 will be signed with a different cert than grub2 arm64 and so on
+* We are signing cloud sig kernel with extra patches as mentioned above
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
@@ -316,5 +316,5 @@ No
 *******************************************************************************
 * Accepted shim reviews for Rocky Linux 8 are: #194 : MSFT submission ID 13765341761864248 and #274 : MSFT submission ID 14460228699919626
 * We are planning to sign systemd-boot with the required patches and release it in a SIG
-* We are planning to sing and release kernel-mainline 6.6 for Rocky Linux 8 sometime this year
+* We are planning to sing and release kernel-mainline 6.6 for Rocky Linux 8 sometime this year for x64 and aa64
 * We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim
