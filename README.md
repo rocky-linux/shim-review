@@ -170,7 +170,7 @@ All mentioned patches are applied
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-* Stock kernel is RHEL , no extra patches:
+* Stock kernel is RHEL , no extra patches
 * Cloud sig kernel is RHEL kernel with some extra patches:
     * gVNIC backports from mainline Linux for google network drivers
     * AMD IOMMU backports from mainline Linux
