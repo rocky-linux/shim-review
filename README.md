@@ -244,6 +244,19 @@ from Fedora or Debian), please preserve the SBAT entry from those distributions
 and only append your own. More information on how SBAT works can be found
 [here](https://github.com/rhboot/shim/blob/main/SBAT.md).
 *******************************************************************************
+Kernel-uki-virt:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+systemd,1,The systemd Developers,systemd,252,https://systemd.io/
+systemd.rocky,1,Rocky Linux,systemd,252-18.el9.0.1.rocky,https://bugs.rockylinux.org/
+linux,1,Red Hat,linux,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugzilla.redhat.com/
+linux,1,RESF,linux,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugs.rockylinux.org/
+linux.rhel,1,Red Hat,linux,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugzilla.redhat.com/
+linux.rocky,1,RESF,linux,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugs.rockylinux.org/
+kernel-uki-virt.rhel,1,Red Hat,kernel-uki-virt,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugzilla.redhat.com/
+kernel-uki-virt.rocky,1,RESF,kernel-uki-virt,5.14.0-362.18.1.el9_3.0.1.x86_64,https://bugs.rockylinux.org/
+```
+
 fwupd:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
