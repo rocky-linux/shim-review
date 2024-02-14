@@ -316,13 +316,12 @@ No
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
-* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.11.1.el8_9.0.1` for base and for SIG cloud " alongside gVNC patch and IMMOU patch for SIG cloud kernel, same version as base kernel "
-* SIG kernel with kernel-maineline 6.6 with all lockdown patches already mainline
+* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.11.1.el8_9.0.1`
+* SIG cloud kernel based on same RHEL8 kernel " alongside gVNC patch and IMMOU patch for SIG cloud kernel "
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim.
 *******************************************************************************
 * Accepted shim reviews for Rocky Linux 8 are: #194 : MSFT submission ID 13765341761864248 and #274 : MSFT submission ID 14460228699919626
 * We are planning to sign systemd-boot with the required patches and release it in a SIG
-* We are planning to sign kernel-mainline 6.6 for aarch64
 * We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim
