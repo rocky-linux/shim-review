@@ -23,22 +23,22 @@ Here's the template:
 *******************************************************************************
 ### What organization or people are asking to have this signed?
 *******************************************************************************
-[your text here]
+Rocky Enterprise Software Foundation
 
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-[your text here]
+Rocky Linux 8
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
 *******************************************************************************
-[your text here]
+Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with RHEL
 
 *******************************************************************************
 ### Why are you unable to reuse shim from another distro that is already signed?
 *******************************************************************************
-[your text here]
+We sign our own SIGs kernel and we will be signing systemd-boot alongside some out-of-tree modules for our users / community
 
 *******************************************************************************
 ### Who is the primary contact for security updates, etc.?
@@ -47,10 +47,10 @@ The security contacts need to be verified before the shim can be accepted. For s
 An authorized reviewer will initiate contact verification by sending each security contact a PGP-encrypted email containing random words.
 You will be asked to post the contents of these mails in your `shim-review` issue to prove ownership of the email addresses and PGP keys.
 *******************************************************************************
-- Name:
-- Position:
-- Email address:
-- PGP key fingerprint:
+- Name: Rob Felsburg
+- Position: Security Manager
+- Email address: rfelsburg@resf.org
+- PGP key fingerprint: DB1E 06F8 87BF 1BDB C777 4D1A C622 9FC8 C50D 63A0
 
 (Key should be signed by the other security contacts, pushed to a keyserver
 like keyserver.ubuntu.com, and preferably have signatures that are reasonably
@@ -59,10 +59,10 @@ well known in the Linux community.)
 *******************************************************************************
 ### Who is the secondary contact for security updates, etc.?
 *******************************************************************************
-- Name:
-- Position:
-- Email address:
-- PGP key fingerprint:
+- Name: Sherif Nagy
+- Position: Release Engineer
+- Email address: sherif@rockylinux.org
+- PGP key fingerprint: CC59 76F3 3BCA 5502 837D BCB8 59F4 A40E 6CAB 25F2
 
 (Key should be signed by the other security contacts, pushed to a keyserver
 like keyserver.ubuntu.com, and preferably have signatures that are reasonably
@@ -75,29 +75,33 @@ Please create your shim binaries starting with the 15.8 shim release tar file: h
 This matches https://github.com/rhboot/shim/releases/tag/15.8 and contains the appropriate gnu-efi source.
 
 *******************************************************************************
-[your text here]
+We are using unmodified shim 15.8 release tarball
 
 *******************************************************************************
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
-[your url here]
+https://github.com/rhboot/shim/tree/15.8 and to achieve reproducibility we are using 
+our 9.3 kickstart repos herem where basearch is x86_86 and aarch64: 
+* https://dl.rockylinux.org/pub/rocky/8/BaseOS/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/8/AppStream/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/8/PowerTools/$basearch/kickstart/
 
 *******************************************************************************
 ### What patches are being applied and why:
 *******************************************************************************
-[your text here]
+None
 
 *******************************************************************************
 ### Do you have the NX bit set in your shim? If so, is your entire boot stack NX-compatible and what testing have you done to ensure such compatibility?
 
 See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-shim-community/ba-p/3976522 for more details on the signing of shim without NX bit.
 *******************************************************************************
-[your text here]
+NX is disable across the boot chain
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader what exact implementation of Secureboot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
 *******************************************************************************
-[your text here]
+Downstream RHEL like implementation
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader and your previously released shim booted a version of GRUB2 affected by any of the CVEs in the July 2020, the March 2021, the June 7th 2022, the November 15th 2022, or 3rd of October 2023 GRUB2 CVE list, have fixes for all these CVEs been applied?
@@ -141,19 +145,19 @@ See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-
   * CVE-2023-4693
   * CVE-2023-4692
 *******************************************************************************
-[your text here]
+We only have grub,3 level and those fixes are included, we don't have fixes for the NTFS bugs yet and we don't ship NTFS module
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 4?
 The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`
 *******************************************************************************
-[your text here]
+No, just grub,3 global generation number
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 *******************************************************************************
-[your text here]
+Hashes for old shim are provided to Microsoft and older grub is disallowed to boot via the new increased global generation number of grub,3
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -161,63 +165,74 @@ The entry should look similar to: `grub,4,Free Software Foundation,grub,GRUB_UPS
 ### Is upstream commit [75b0cea7bf307f362057cc778efe89af4c615354 "ACPI: configfs: Disallow loading ACPI tables when locked down"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=75b0cea7bf307f362057cc778efe89af4c615354) applied?
 ### Is upstream commit [eadb2f47a3ced5c64b23b90fd2a3463f63726066 "lockdown: also lock down previous kgdb use"](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=eadb2f47a3ced5c64b23b90fd2a3463f63726066) applied?
 *******************************************************************************
-[your text here]
+All mentioned patches are applied
 
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-[your text here]
+* Stock kernel is RHEL , no extra patches:
+* Cloud sig kernel is RHEL kernel with some extra patches:
+    * gVNIC backports from mainline Linux for google network drivers
+    * AMD IOMMU backports from mainline Linux
+    * Aarch64 only, changing page size patch for GCP hardware and disabel kABI check
+* SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
+* IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
 ### If not, please describe how you ensure that one kernel build does not load modules built for another kernel.
 *******************************************************************************
-[your text here]
+Yes we do ephemeral keys per kernel build
 
 *******************************************************************************
 ### If you use vendor_db functionality of providing multiple certificates and/or hashes please briefly describe your certificate setup.
 ### If there are allow-listed hashes please provide exact binaries for which hashes are created via file sharing service, available in public with anonymous access for verification.
 *******************************************************************************
-[your text here]
+We don't use vendor_db for this build
 
 *******************************************************************************
 ### If you are re-using a previously used (CA) certificate, you will need to add the hashes of the previous GRUB2 binaries exposed to the CVEs to vendor_dbx in shim in order to prevent GRUB2 from being able to chainload those older GRUB2 binaries. If you are changing to a new (CA) certificate, this does not apply.
 ### Please describe your strategy.
 *******************************************************************************
-[your text here]
+Older grub won't be able to boot due to the increase of global generation number in SBAT
 
 *******************************************************************************
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 ### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
 *******************************************************************************
-[your text here]
+Dockerfile is provided to reproduce this build, it will build ia32,x64 and aarch64, might take a bit of time, around 25 minutes or so
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
 *******************************************************************************
-[your text here]
+root_x64.log, build_x64.log and root_aa64.log, build_aa64.log
 
 *******************************************************************************
 ### What changes were made in the distor's secure boot chain since your SHIM was last signed?
 For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA, etc..
 *******************************************************************************
-[your text here]
+* We moved to new HSM FIPS 140-2 level 2 certified module to host the signing keys
+* We are signing and providing secureboot chain packages for arm64 "kernel, grub2, fwupd"
+* We now using separated cert per package per archtecture, so grub2 x64 will be signed with a diffrent cert than grub2 arm64 and so on
+* We are signing cloud sig kernel with extra patches
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-[your text here]
+b5fdf63484a107873da10b27a8e0f6dc8a551ba75383ffcce73d8094a7468629  shimaa64.efi
+f6e74fd1480c862668b2b0365941b68bca98cfff24b012dd4c730ac57838e1f5  shimia32.efi
+b2ef8d3f2c0112a2bceda8d166567a14a68cceadc9338275afbd0310f82118da  shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
 *******************************************************************************
-[your text here]
+We are hosting the keys in HSM FIPS 140-2 level 2 module with restricted access
 
 *******************************************************************************
 ### Do you use EV certificates as embedded certificates in the SHIM?
 *******************************************************************************
-[your text here]
+No
 
 *******************************************************************************
 ### Do you add a vendor-specific SBAT entry to the SBAT section in each binary that supports SBAT metadata ( GRUB2, fwupd, fwupdate, systemd-boot, systemd-stub, shim + all child shim binaries )?
@@ -228,48 +243,86 @@ from Fedora or Debian), please preserve the SBAT entry from those distributions
 and only append your own. More information on how SBAT works can be found
 [here](https://github.com/rhboot/shim/blob/main/SBAT.md).
 *******************************************************************************
-[your text here]
+fwupd:
+```
+sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
+fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
+fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
+```
+
+grub2 "ia32 and x86_64":
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,3,Free Software Foundation,grub,2.02,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.02-150.el8,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.02-150.el8.rocky.0.2,mail:security@rockylinux.org
+```
+
+shim "ia32, x86_64 and aarch64:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.rocky,3,Rocky Linux,shim,15.8,security@rockylinux.org
+```
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
-[your text here]
+all_video boot blscfg
+cat configfile cryptodisk echo ext2		
+fat font gcry_rijndael gcry_rsa gcry_serpent	
+gcry_sha256 gcry_twofish gcry_whirlpool		
+gfxmenu gfxterm gzio halt http			
+increment iso9660 jpeg loadenv loopback linux	
+lvm luks mdraid09 mdraid1x minicmd net		
+normal part_apple part_msdos part_gpt		
+password_pbkdf2 png reboot regexp search	
+search_fs_uuid search_fs_file search_label	
+serial sleep syslinuxcfg test tftp video xfs
+efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
+backtrace chain usb usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
 
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
 *******************************************************************************
-[your text here]
+Currently, we don't providing signed systemd-boot
 
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-[your text here]
+grub2-2.02-150.el8.rocky.0.2
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
 *******************************************************************************
-[your text here]
+Also launches fwupd
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
 *******************************************************************************
-[your text here]
+grub2 verifies signatures on booted kernels via shim. fwupd does not include code to launch other binaries, it can only load UEFI Capsule updates.
 
 *******************************************************************************
 ### How do the launched components prevent execution of unauthenticated code?
 *******************************************************************************
-[your text here]
+All component has .sbat self checks and secureboot validation
 
 *******************************************************************************
 ### Does your SHIM load any loaders that support loading unsigned kernels (e.g. GRUB2)?
 *******************************************************************************
-[your text here]
+No
+
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
-[your text here]
+* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.11.1.el8_9.0.1` for base and for SIG cloud " alongside gVNC patch and IMMOU patch for SIG cloud kernel, same version as base kernel "
+* SIG kernel with kernel-maineline 6.6 with all lockdown patches already mainline
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim.
 *******************************************************************************
-[your text here]
+* Accepted shim reviews for Rocky Linux 8 are: #194 : MSFT submission ID 13765341761864248 and #274 : MSFT submission ID 14460228699919626
+* We are planning to sign systemd-boot with the required patches and release it in a SIG
+* We are planning to sign kernel-mainline 6.6 for aarch64
+* We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim
