@@ -324,4 +324,5 @@ No
 *******************************************************************************
 * Accepted shim reviews for Rocky Linux 8 are: #194 : MSFT submission ID 13765341761864248 and #274 : MSFT submission ID 14460228699919626
 * We are planning to sign systemd-boot with the required patches and release it in a SIG
+* We are planning to sing and release kernel-mainline 6.6 for Rocky Linux 8 sometime this year
 * We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim
