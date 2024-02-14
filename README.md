@@ -243,7 +243,7 @@ from Fedora or Debian), please preserve the SBAT entry from those distributions
 and only append your own. More information on how SBAT works can be found
 [here](https://github.com/rhboot/shim/blob/main/SBAT.md).
 *******************************************************************************
-fwupd:
+fwupd x64 and aa64:
 ```
 sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 fwupd-efi,1,Firmware update daemon,fwupd-efi,1.3,https://github.com/fwupd/fwupd-efi
@@ -251,7 +251,7 @@ fwupd-efi.rhel,1,Red Hat Enterprise Linux,fwupd,1.7.8,mail:secalert@redhat.com
 fwupd-efi.rocky,1,Rocky Linux,fwupd,1.7.8,mail:security@rockylinux.org
 ```
 
-grub2 "ia32 and x86_64":
+grub2 ia32, x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 grub,3,Free Software Foundation,grub,2.02,https//www.gnu.org/software/grub/
@@ -259,7 +259,7 @@ grub.rh,2,Red Hat,grub2,2.02-150.el8,mailto:secalert@redhat.com
 grub.rocky,2,Rocky Linux,grub2,2.02-150.el8.rocky.0.2,mail:security@rockylinux.org
 ```
 
-shim "ia32, x86_64 and aarch64:
+shim ia32, x64 and aa64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
