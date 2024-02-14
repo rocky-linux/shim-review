@@ -170,7 +170,7 @@ All mentioned patches are applied
 *******************************************************************************
 ### Do you build your signed kernel with additional local patches? What do they do?
 *******************************************************************************
-* Stock kernel is RHEL , no extra patches:
+* Stock kernel is RHEL , no extra patches
 * Cloud sig kernel is RHEL kernel with some extra patches:
     * gVNIC backports from mainline Linux for google network drivers
     * AMD IOMMU backports from mainline Linux
@@ -201,7 +201,7 @@ Older grub won't be able to boot due to the increase of global generation number
 ### What OS and toolchain must we use to reproduce this build?  Include where to find it, etc.  We're going to try to reproduce your build as closely as possible to verify that it's really a build of the source tree you tell us it is, so these need to be fairly thorough. At the very least include the specific versions of gcc, binutils, and gnu-efi which were used, and where to find those binaries.
 ### If the shim binaries can't be reproduced using the provided Dockerfile, please explain why that's the case and what the differences would be.
 *******************************************************************************
-Dockerfile is provided to reproduce this build, it will build ia32,x64 and aarch64, might take a bit of time, around 25 minutes or so
+Dockerfile is provided to reproduce this build, it will build x64 and aarch64, might take a bit of time, around 25 minutes or so
 
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
@@ -215,15 +215,15 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 *******************************************************************************
 * We moved to new HSM FIPS 140-2 level 2 certified module to host the signing keys
 * We are signing and providing secureboot chain packages for arm64 "kernel, grub2, fwupd"
-* We now using separated cert per package per archtecture, so grub2 x64 will be signed with a diffrent cert than grub2 arm64 and so on
-* We are signing cloud sig kernel with extra patches
+* We now using separated cert per package per architecture, so grub2 x64 will be signed with a diffrent cert than grub2 arm64 and so on
+* We are signing cloud sig kernel with extra patches backported from mainline kernel "gVNC IMMOU"
+* We are signing kernel sig kernel mainline 6.6 with no extra patches from mainline
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-b5fdf63484a107873da10b27a8e0f6dc8a551ba75383ffcce73d8094a7468629  shimaa64.efi
-f6e74fd1480c862668b2b0365941b68bca98cfff24b012dd4c730ac57838e1f5  shimia32.efi
-b2ef8d3f2c0112a2bceda8d166567a14a68cceadc9338275afbd0310f82118da  shimx64.efi
+e48af33e1efd1e87100aa920ed7c9cb797943796f9d2fcbea064b6c0bc168b9a  shimaa64.efi
+5abb4d7ae6b549be1193dbd0c5a61ede7235dafa9f627539379319ca139184c9  shimx64.efi
 
 *******************************************************************************
 ### How do you manage and protect the keys used in your SHIM?
@@ -260,7 +260,7 @@ grub.rh,2,Red Hat,grub2,2.02-150.el8,mailto:secalert@redhat.com
 grub.rocky,2,Rocky Linux,grub2,2.02-150.el8.rocky.0.2,mail:security@rockylinux.org
 ```
 
-shim "ia32, x86_64 and aarch64:
+shim "x86_64 and aarch64:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
