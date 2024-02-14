@@ -28,7 +28,7 @@ Rocky Enterprise Software Foundation
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Rocky Linux 8
+Rocky Linux 9
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -82,9 +82,9 @@ We are using unmodified shim 15.8 release tarball
 *******************************************************************************
 https://github.com/rhboot/shim/tree/15.8 and to achieve reproducibility we are using 
 our 9.3 kickstart repos herem where basearch is x86_86 and aarch64: 
-* https://dl.rockylinux.org/pub/rocky/8/BaseOS/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/8/AppStream/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/8/PowerTools/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/9/BaseOS/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/9/AppStream/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/9/CRB/$basearch/kickstart/
 
 *******************************************************************************
 ### What patches are being applied and why:
@@ -177,6 +177,7 @@ All mentioned patches are applied
     * Aarch64 only, changing page size patch for GCP hardware and disabel kABI check
 * SIG cloud sources are here https://git.rockylinux.org/sig/cloud/rpms/kernel 
 * IOMMU and Kabi are here: https://git.rockylinux.org/sig/cloud/patch/kernel
+* kernel-mainline 6.6, with no source modifications, sources are here: https://git.rockylinux.org/sig/kernel/rpms/kernel-mainline
 
 *******************************************************************************
 ### Do you use an ephemeral key for signing kernel modules?
