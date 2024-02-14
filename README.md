@@ -318,3 +318,4 @@ No
 * We are planning to sign systemd-boot with the required patches and release it in a SIG
 * We are planning to sing and release kernel-mainline 6.6 for Rocky Linux 8 sometime this year for x64 and aa64
 * We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim
+* All our certs are in this repo: https://git.rockylinux.org/original/rpms/rocky-release 
