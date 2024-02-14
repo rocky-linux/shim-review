@@ -28,7 +28,7 @@ Rocky Enterprise Software Foundation
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Rocky Linux 8
+Rocky Linux 9
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -81,10 +81,10 @@ We are using unmodified shim 15.8 release tarball
 ### URL for a repo that contains the exact code which was built to get this binary:
 *******************************************************************************
 https://github.com/rhboot/shim/tree/15.8 and to achieve reproducibility we are using 
-our 9.3 kickstart repos herem where basearch is x86_86 and aarch64: 
-* https://dl.rockylinux.org/pub/rocky/8/BaseOS/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/8/AppStream/$basearch/kickstart/
-* https://dl.rockylinux.org/pub/rocky/8/PowerTools/$basearch/kickstart/
+our 8.9 kickstart repos herem where basearch is x86_86 and aarch64: 
+* https://dl.rockylinux.org/pub/rocky/9/BaseOS/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/9/AppStream/$basearch/kickstart/
+* https://dl.rockylinux.org/pub/rocky/9/PowerTools/$basearch/kickstart/
 
 *******************************************************************************
 ### What patches are being applied and why:
