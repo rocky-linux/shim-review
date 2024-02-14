@@ -270,19 +270,11 @@ shim.rocky,3,Rocky Linux,shim,15.8,security@rockylinux.org
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
 *******************************************************************************
-all_video boot blscfg
-cat configfile cryptodisk echo ext2		
-fat font gcry_rijndael gcry_rsa gcry_serpent	
-gcry_sha256 gcry_twofish gcry_whirlpool		
-gfxmenu gfxterm gzio halt http			
-increment iso9660 jpeg loadenv loopback linux	
-lvm luks mdraid09 mdraid1x minicmd net		
-normal part_apple part_msdos part_gpt		
-password_pbkdf2 png reboot regexp search	
-search_fs_uuid search_fs_file search_label	
-serial sleep syslinuxcfg test tftp video xfs
-efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
-backtrace chain usb usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
+x64:
+all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm luks luks2 mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt password_pbkdf2 pgp png reboot regexp search search_fs_uuid search_fs_file search_label serial sleep syslinuxcfg test tftp version video xfs zstd efi_netfs efifwsetup efinet lsefi lsefimmap connectefi backtrace chain tpm usb usbserial_common usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
+
+aa64:
+all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font gcry_rijndael gcry_rsa gcry_serpent gcry_sha256 gcry_twofish gcry_whirlpool gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm luks luks2 mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt password_pbkdf2 pgp png reboot regexp search search_fs_uuid search_fs_file search_label serial sleep syslinuxcfg test tftp version video xfs zstd efi_netfs efifwsetup efinet lsefi lsefimmap connectefi
 
 *******************************************************************************
 ### If you are using systemd-boot on arm64 or riscv, is the fix for [unverified Devicetree Blob loading](https://github.com/systemd/systemd/security/advisories/GHSA-6m6p-rjcq-334c) included?
@@ -292,7 +284,7 @@ Currently, we are not providing signed systemd-boot
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-grub2-2.02-150.el8.rocky.0.2
+grub2-2.06-70.el9_3.2.rocky.0.3
 
 *******************************************************************************
 ### If your SHIM launches any other components, please provide further details on what is launched.
@@ -317,13 +309,14 @@ No
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
-* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.11.1.el8_9.0.1` for base and for SIG cloud " alongside gVNC patch and IMMOU patch for SIG cloud kernel, same version as base kernel "
+* Downstream kernel from RHEL9 which based on 5.14.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-5.14.0-362.18.1.el9_3.0.1`
+* SIG cloud kernel based on same RHEL9 kernel " alongside gVNC patch and IMMOU patch for SIG cloud kernel "
 * SIG kernel with kernel-maineline 6.6 with all lockdown patches already mainline
 
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim.
 *******************************************************************************
-* Accepted shim reviews for Rocky Linux 8 are: #194 : MSFT submission ID 13765341761864248 and #274 : MSFT submission ID 14460228699919626
+* Accepted shim review for Rocky Linux 9 is: #273 : MSFT submission ID 14607686334015979
 * We are planning to sign systemd-boot with the required patches and release it in a SIG
 * We are planning to sign kernel-mainline 6.6 for aarch64
 * We increased the sbat global number generate for shim based on strong recommendation to increase it with every new shim

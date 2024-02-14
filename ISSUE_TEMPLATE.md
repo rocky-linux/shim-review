@@ -12,18 +12,16 @@ Confirm the following are included in your repo, checking each box:
 *******************************************************************************
 ### What is the link to your tag in a repo cloned from rhboot/shim-review?
 *******************************************************************************
-`https://github.com/rocky-linux/shim-review/tree/rockylinux-8-shim-15.8-ia32-x86_64-aarch64-20240214`
+`https://github.com/rocky-linux/shim-review/tree/rockylinux-9-shim-15.8-x86_64-aarch64-20240214`
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
 *******************************************************************************
-b5fdf63484a107873da10b27a8e0f6dc8a551ba75383ffcce73d8094a7468629  shimaa64.efi
-f6e74fd1480c862668b2b0365941b68bca98cfff24b012dd4c730ac57838e1f5  shimia32.efi
-b2ef8d3f2c0112a2bceda8d166567a14a68cceadc9338275afbd0310f82118da  shimx64.efi
+e48af33e1efd1e87100aa920ed7c9cb797943796f9d2fcbea064b6c0bc168b9a  shimaa64.efi
+5abb4d7ae6b549be1193dbd0c5a61ede7235dafa9f627539379319ca139184c9  shimx64.efi
 
 *******************************************************************************
 ### What is the link to your previous shim review request (if any, otherwise N/A)?
 *******************************************************************************
-Accepted shim reviews for Rocky Linux 8 are:
-* #274 : MSFT submission ID 14460228699919626
-* #194 : MSFT submission ID 13765341761864248 
+Accepted shim reviews for Rocky Linux 9 is:
+* #273 : MSFT submission ID 14607686334015979
