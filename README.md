@@ -218,6 +218,7 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 * We now using separated cert per package per architecture, so grub2 x64 will be signed with a different cert than grub2 arm64 and so on
 * We are signing cloud sig kernel with extra patches backported from mainline kernel "gVNC IMMOU" as mentioned above
 * We are signing kernel sig kernel mainline 6.6 with no extra patches from mainline
+* We are signing kernel UKI variant as well
 
 *******************************************************************************
 ### What is the SHA256 hash of your final SHIM binary?
