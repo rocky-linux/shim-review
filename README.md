@@ -203,6 +203,8 @@ Older grub won't be able to boot due to the increase of global generation number
 *******************************************************************************
 Dockerfile is provided to reproduce this build, it will build x64 and aarch64, might take a bit of time, around 25 minutes or so
 
+Also I added single dockerfile per arch - Dockerfile_aa64 and Dockerfile_x64
+
 *******************************************************************************
 ### Which files in this repo are the logs for your build?
 This should include logs for creating the buildroots, applying patches, doing the build, creating the archives, etc.
