@@ -1,0 +1,34 @@
+FROM --platform=linux/arm64 quay.io/rockylinux/rockylinux:9.3.20231119 AS arm64
+ENV EL_PLATFORM el9
+ENV SHIM_VERSION 15.8-2.$EL_PLATFORM
+
+COPY rpmmacros /root/.rpmmacros
+COPY shim-unsigned-aarch64-$SHIM_VERSION.src.rpm /
+RUN rm -rfv /etc/yum.repos.d/*
+COPY kickstart.repo /etc/yum.repos.d/
+RUN rpm -ivh shim-unsigned-aarch64-$SHIM_VERSION.src.rpm
+RUN dnf install -y dnf-plugins-core rpm-build
+RUN dnf builddep -y /builddir/build/SPECS/shim-unsigned-aarch64.spec
+RUN rpmbuild -bb /builddir/build/SPECS/shim-unsigned-aarch64.spec
+
+RUN mkdir /built_shim/
+COPY shimaa64.efi /
+
+RUN rpm2cpio /builddir/build/RPMS/aarch64/shim-unsigned-aarch64-$SHIM_VERSION.aarch64.rpm | cpio -diu -D /built_shim
+RUN ls -l /*.efi /built_shim/usr/share/shim/$SHIM_VERSION/*/shim*.efi
+
+RUN sha256sum /built_shim/usr/share/shim/$SHIM_VERSION/aa64/shimaa64.efi /shimaa64.efi
+
+RUN hexdump -Cv /built_shim/usr/share/shim/$SHIM_VERSION/aa64/shimaa64.efi > built-aa64.hex
+
+RUN hexdump -Cv /shimaa64.efi > orig-aa64.hex
+
+RUN diff -u orig-aa64.hex built-aa64.hex
+
+RUN cmp /built_shim/usr/share/shim/$SHIM_VERSION/aa64/shimaa64.efi /shimaa64.efi
+
+RUN pesign -h -P -i /built_shim/usr/share/shim/$SHIM_VERSION/aa64/shimaa64.efi
+
+RUN pesign -h -P -i /shimaa64.efi
+
+RUN sha256sum /built_shim/usr/share/shim/$SHIM_VERSION/aa64/shimaa64.efi /shimaa64.efi
