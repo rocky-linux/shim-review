@@ -310,7 +310,7 @@ No
 *******************************************************************************
 ### What kernel are you using? Which patches does it includes to enforce Secure Boot?
 *******************************************************************************
-* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.11.1.el8_9.0.1`
+* Downstream kernel from RHEL8 which based on 4.18.0, plus a full compliment of patches for Secure Boot and relevant bug fixes. `kernel-4.18.0-513.18.1.el8_9`
 * SIG cloud kernel based on same RHEL8 kernel " alongside gVNC patch and IMMOU patch for SIG cloud kernel "
 
 *******************************************************************************
