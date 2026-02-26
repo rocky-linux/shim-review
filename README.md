@@ -28,9 +28,9 @@ Here's the template:
 *******************************************************************************
 Organization name and website:  
 
-The Rocky Enterprise Software Foundation
-https://resf.org
-https://rockylinux.org
+* The Rocky Enterprise Software Foundation
+* https://resf.org
+* https://rockylinux.org
 
 *******************************************************************************
 ### What's the legal data that proves the organization's genuineness?
@@ -406,4 +406,4 @@ We always participate in the peer-review process for other distros, usually RHEL
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
-We are in the process of evaluating the way we sign SIG cloud kernel so with the next shim release we might revoke the current certificated being used for this SIG
+N/A at the moment
