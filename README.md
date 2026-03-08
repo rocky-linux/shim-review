@@ -234,7 +234,7 @@ Downstream RHEL like implementation
   * CVE-2025-1118
   * CVE-2025-1125
 *******************************************************************************
-Yes, it is set to grub,5
+Yes, it is set to `grub,5`
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
@@ -250,7 +250,7 @@ Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRU
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 If you had no previous signed shim, say so here. Otherwise a simple _yes_ will do.
 *******************************************************************************
-yes
+yes and yes
 
 *******************************************************************************
 ### If your boot chain of trust includes a Linux kernel:
@@ -335,7 +335,7 @@ We are hosting the keys in HSM FIPS 140-2 level 2 module with restricted access
 ### Do you use EV certificates as embedded certificates in the shim?
 A _yes_ or _no_ will do. There's no penalty for the latter.
 *******************************************************************************
-Currently, we are not providing signed systemd-boot
+No
 
 *******************************************************************************
 ### Are you embedding a CA certificate in your shim?
@@ -357,7 +357,69 @@ If you are using a downstream implementation of GRUB2 (e.g. from Fedora or Debia
 
 Hint: run `objcopy --dump-section .sbat=/dev/stdout YOUR_EFI_BINARY` to get these entries. Paste them here. Preferably surround each listing with three backticks (\`\`\`), so they render well.
 *******************************************************************************
-[your text here]
+For x64:
+
+shim:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+```
+
+grub2:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,5,Free Software Foundation,grub,2.12,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.12-29.el10_1,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.12-29.el10_1,mail:security@rockylinux.org
+```
+
+fwupd:
+```
+sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.6,https://github.com/fwupd/fwupd-efi
+fwupd-efi.fedora,1,The Fedora Project,fwupd-efi,1.6-3.el10.rocky.0.2,https://src.fedoraproject.org/rpms/fwupd-efi
+fwupd-efi.rocky,1,Rocky Linux,fwupd-efi,1.6-3.el10.rocky.0.2,mail:security@rockylinux.org
+```
+
+kernel-uki-virt:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+systemd-stub,1,The systemd Developers,systemd,257,https://systemd.io/
+systemd-stub.rocky,1,Rocky Linux,systemd,257-13.el10.rocky.0.1-ga75e2b0,mailto:security@rockylinux.org
+kernel-uki-virt.rhel,1,Red Hat,kernel-uki-virt,6.12.0-124.40.1.el10_1.x86_64,mailto:secalert@redhat.com
+kernel-uki-virt.rocky,1,RESF,kernel-uki-virt,6.12.0-124.40.1.el10_1.x86_64,mailto:security@rockylinux.org
+```
+
+For Aarch64:
+
+shim:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
+shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+```
+
+grub2:
+```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+grub,5,Free Software Foundation,grub,2.12,https//www.gnu.org/software/grub/
+grub.rh,2,Red Hat,grub2,2.12-29.el10_1,mailto:secalert@redhat.com
+grub.rocky,2,Rocky Linux,grub2,2.12-29.el10_1,mail:security@rockylinux.org
+```
+
+fwupd:
+```
+sbat,1,UEFI shim,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+fwupd-efi,1,Firmware update daemon,fwupd-efi,1.6,https://github.com/fwupd/fwupd-efi
+fwupd-efi.fedora,1,The Fedora Project,fwupd-efi,1.6-3.el10.rocky.0.2,https://src.fedoraproject.org/rpms/fwupd-efi
+fwupd-efi.rocky,1,Rocky Linux,fwupd-efi,1.6-3.el10.rocky.0.2,mail:security@rockylinux.org
+```
+
+kernel-uki-virt:
+```
+```
+
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
@@ -394,19 +456,19 @@ We don't sign systemd-boot
 *******************************************************************************
 ### What is the origin and full version number of your bootloader (GRUB2 or systemd-boot or other)?
 *******************************************************************************
-grub2-2.12-29.el10_1
+`grub2-2.12-29.el10_1`
 
 *******************************************************************************
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-None
+It also launches fwupd and UKI kernel.
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
 Skip this, if you're not using GRUB2 or systemd-boot.
 *******************************************************************************
-grub2 verifies signatures on booted kernels via shim. fwupdmgr does not include code to launch other binaries, it can only load UEFI Capsule updates.
+grub2 verifies signatures on booted kernels via shim. fwupdd does not include code to launch other binaries, it can only load UEFI Capsule updates.
 
 *******************************************************************************
 ### How do the launched components prevent execution of unauthenticated code?
