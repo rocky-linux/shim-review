@@ -322,7 +322,7 @@ Nothing changed since our last submission
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-1c647e2a09c6545a0efbb6318e638eac4c14f96719c343aa8bb10ebe845e29cd  shimaa64.efi
+cd78773614fd3cc38685efe33af0b1ad833a72a6db1ae1deaef162dcb4514ed5  shimaa64.efi
 da1428b77f640823ea9646ff49fd7c7d1d3a1d897eb03b2c597c0e73791bea45  shimx64.efi
 ```
 
