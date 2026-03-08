@@ -429,6 +429,19 @@ Skip this, if you're not using GRUB2.
 
 Hint: this is about those modules that are in the binary itself, not the `.mod` files in your filesystem.
 *******************************************************************************
+For x64:
+```
+all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font
+gcry_rijndael gcry_rsa gcry_serpent	gcry_sha256 gcry_twofish gcry_whirlpool
+gfxmenu gfxterm gzio halt http increment iso9660 jpeg loadenv loopback linux lvm luks
+luks2 mdraid09 mdraid1x minicmd net normal part_apple part_msdos part_gpt
+password_pbkdf2 pgp png reboot regexp search search_fs_uuid search_fs_file
+search_label serial sleep syslinuxcfg test tftp version video xfs zstd
+efi_netfs efifwsetup efinet lsefi lsefimmap connectefi backtrace chain tpm usb usbserial_common
+usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
+```
+
+for aarch64:
 ```
 all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font
 gcry_rijndael gcry_rsa gcry_serpent	gcry_sha256 gcry_twofish gcry_whirlpool
