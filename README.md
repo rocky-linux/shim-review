@@ -491,3 +491,4 @@ We always participate in the peer-review process for other distros, usually RHEL
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
 We renamed our CA cert file we upload to the submission to match the same file name in our `rocky-sb-certs` package
+`secureboot-ca-aarch64.cer` and `secureboot-ca-x86_64.cer` are symlinks to `rocky-root-ca.der` from here https://git.rockylinux.org/staging/rpms/rocky-release/-/tree/r9?ref_type=heads
