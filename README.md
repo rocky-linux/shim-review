@@ -248,7 +248,7 @@ Yes, it is set to `grub,5`
 ### Does your new chain of trust disallow booting old GRUB2 builds affected by the CVEs?
 If you had no previous signed shim, say so here. Otherwise a simple _yes_ will do.
 *******************************************************************************
-* yes Microsoft has the hashes
+* Yes Microsoft has the hashes
 * All affected grub binaries are added into the `dbx.esl` for revocation by this shim "separate `dbx.esl` for `Aarch64` and `x86_64`
 
 *******************************************************************************
@@ -336,7 +336,7 @@ We are hosting the keys in HSM FIPS 140-2 level 2 module with restricted access 
 ### Do you use EV certificates as embedded certificates in the shim?
 A _yes_ or _no_ will do. There's no penalty for the latter.
 *******************************************************************************
-Currently, we are not providing signed systemd-boot
+No
 
 *******************************************************************************
 ### Are you embedding a CA certificate in your shim?
@@ -430,6 +430,7 @@ Skip this, if you're not using GRUB2.
 Hint: this is about those modules that are in the binary itself, not the `.mod` files in your filesystem.
 *******************************************************************************
 For x64:
+
 ```
 all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font
 gcry_rijndael gcry_rsa gcry_serpent	gcry_sha256 gcry_twofish gcry_whirlpool
@@ -441,7 +442,8 @@ efi_netfs efifwsetup efinet lsefi lsefimmap connectefi backtrace chain tpm usb u
 usbserial_pl2303 usbserial_ftdi usbserial_usbdebug keylayouts at_keyboard
 ```
 
-for aarch64:
+For aarch64:
+
 ```
 all_video boot blscfg cat configfile cryptodisk echo ext2 f2fs fat font
 gcry_rijndael gcry_rsa gcry_serpent	gcry_sha256 gcry_twofish gcry_whirlpool
