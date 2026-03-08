@@ -153,7 +153,7 @@ None
 
 See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-shim-community/ba-p/3976522 for more details on the signing of shim without NX bit.
 *******************************************************************************
-NX is disabled across the boot chain
+NX is not set
 
 *******************************************************************************
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
@@ -227,16 +227,14 @@ Downstream RHEL like implementation
   * CVE-2025-1118
   * CVE-2025-1125
 *******************************************************************************
-Yes, it is set to `grub,5`
+We have all those patches
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, and if these fixes have been applied, is the upstream global SBAT generation in your GRUB2 binary set to 5?
 Skip this, if you're not using GRUB2, otherwise do you have an entry in your GRUB2 binary similar to:  
 `grub,5,Free Software Foundation,grub,GRUB_UPSTREAM_VERSION,https://www.gnu.org/software/grub/`?
 *******************************************************************************
-* Yes Microsoft has the hashes
-* We never signed and shipped any `grub2` binaries with any of those CVEs for Rocky Linux 10
-* All affected grub binaries from `rocky 9` are added into the `dbx.esl` for revocation by this shim "separate `dbx.esl` for `Aarch64` and `x86_64` as well
+Yes, it is set to `grub,5`
 
 *******************************************************************************
 ### Were old shims hashes provided to Microsoft for verification and to be added to future DBX updates?
@@ -284,7 +282,8 @@ This ensures that your new shim+GRUB2 can no longer chainload those older GRUB2 
 
 If this is your first application or you're using a new CA certificate, please say so here.
 *******************************************************************************
-We never signed and shipped any of those CVEs affected `grub2` for `rocky linux 10` and the affected one from `rocky linux 9` are added to dbx.esl and we are on `grub,5`at the moment so we can increase the automatic revocation policy in the future
+* We never signed and shipped any `grub2` binaries with any of those CVEs for `Rocky Linux 10`
+* All affected grub binaries from `Rocky Linux 9` are added into the `dbx.esl` for revocation by this shim "separate `dbx.esl` for `Aarch64` and `x86_64` as well
 
 *******************************************************************************
 ### Is the Dockerfile in your repository the recipe for reproducing the building of your shim binary?
@@ -411,8 +410,12 @@ fwupd-efi.rocky,1,Rocky Linux,fwupd-efi,1.6-3.el10.rocky.0.2,mail:security@rocky
 
 kernel-uki-virt:
 ```
+sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
+systemd-stub,1,The systemd Developers,systemd,257,https://systemd.io/
+systemd-stub.rocky,1,Rocky Linux,systemd,257-13.el10.rocky.0.1-g0ca3cb4,mailto:security@rockylinux.org
+kernel-uki-virt.rhel,1,Red Hat,kernel-uki-virt,6.12.0-124.40.1.el10_1.aarch64,mailto:secalert@redhat.com
+kernel-uki-virt.rocky,1,RESF,kernel-uki-virt,6.12.0-124.40.1.el10_1.aarch64,mailto:security@rockylinux.org
 ```
-
 
 *******************************************************************************
 ### If shim is loading GRUB2 bootloader, which modules are built into your signed GRUB2 image?
