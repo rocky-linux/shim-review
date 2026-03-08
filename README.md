@@ -307,7 +307,7 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 
 Skip this, if this is your first application for having shim signed.
 *******************************************************************************
-Nothing changed since our last submission
+Nothing changed since our last submission for `Rocky Linux 9`, but this our first `Rocky Linux 10` submission and matches `Rocky Linux 9` submission
 
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
@@ -480,7 +480,7 @@ No
 *******************************************************************************
 ### What kernel are you using? Which patches and configuration does it include to enforce Secure Boot?
 *******************************************************************************
-`kernel-6.12.0-124.40.1.el10_1` Patched mentioned above, enforces lockdown when secureboot is enabled
+`kernel-6.12.0-124.40.1.el10_1` Patches mentioned above, enforces lockdown when secureboot is enabled
 
 *******************************************************************************
 ### What contributions have you made to help us review the applications of other applicants?
