@@ -67,7 +67,7 @@ Subject: C=XX, O=MyCompany, Inc., CN=MyCompany, Inc.
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Rocky Linux 9
+Rocky Linux 9 NX support
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -153,7 +153,7 @@ None
 
 See https://techcommunity.microsoft.com/t5/hardware-dev-center/nx-exception-for-shim-community/ba-p/3976522 for more details on the signing of shim without NX bit.
 *******************************************************************************
-NX is disabled across the boot chain
+NX is enabled for this build
 
 *******************************************************************************
 ### What exact implementation of Secure Boot in GRUB2 do you have? (Either Upstream GRUB2 shim_lock verifier or Downstream RHEL/Fedora/Debian/Canonical-like implementation)
@@ -315,8 +315,8 @@ Nothing changed since our last submission
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-1c647e2a09c6545a0efbb6318e638eac4c14f96719c343aa8bb10ebe845e29cd  shimaa64.efi
-da1428b77f640823ea9646ff49fd7c7d1d3a1d897eb03b2c597c0e73791bea45  shimx64.efi
+7410f86dfb37c6eeb3f35d33edd77cb41e56b350b04bb0a4b0372b870340876b  shimx64.nx.efi
+
 ```
 
 *******************************************************************************
@@ -358,7 +358,7 @@ shim:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+shim.rocky,3,Rocky Linux,shim,16.1,mailto:security@rockylinux.org
 ```
 
 grub2:
@@ -396,7 +396,7 @@ shim:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+shim.rocky,3,Rocky Linux,shim,16.1,mailto:security@rockylinux.org
 ```
 
 grub2:
@@ -446,7 +446,7 @@ We don't sign systemd-boot
 ### If your shim launches any other components apart from your bootloader, please provide further details on what is launched.
 Hint: The most common case here will be a firmware updater like fwupd.
 *******************************************************************************
-None
+Fwupd and UKI kernel
 
 *******************************************************************************
 ### If your GRUB2 or systemd-boot launches any other binaries that are not the Linux kernel in SecureBoot mode, please provide further details on what is launched and how it enforces Secureboot lockdown.
@@ -483,4 +483,6 @@ We always participate in the peer-review process for other distros, usually RHEL
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
-We renamed our CA cert file we upload to the submission to match the same file name in our `rocky-sb-certs` package
+* We renamed our CA cert file we upload to the submission to match the same file name in our `rocky-sb-certs` package
+* This is identical submission as #527 but with NX enabled and we fixed `mailto` in our SHIM sbat entry
+
