@@ -67,7 +67,7 @@ Subject: C=XX, O=MyCompany, Inc., CN=MyCompany, Inc.
 *******************************************************************************
 ### What product or service is this for?
 *******************************************************************************
-Rocky Linux 10 
+Rocky Linux 10 NX support
 
 *******************************************************************************
 ### What's the justification that this really does need to be signed for the whole world to be able to boot it?
@@ -307,14 +307,14 @@ For example, signing new kernel's variants, UKI, systemd-boot, new certs, new CA
 
 Skip this, if this is your first application for having shim signed.
 *******************************************************************************
-Nothing changed since our last submission for `Rocky Linux 9`, but this our first `Rocky Linux 10` submission and matches `Rocky Linux 9` submission
+Nothing changed since our last submission for `Rocky Linux 10`
 
 *******************************************************************************
 ### What is the SHA256 hash of your final shim binary?
 *******************************************************************************
 ```
-3b5263713459ef341351aed91ca7efe77e77148903ac3501bdad665287defbc3  shimaa64.efi
-9111271af62057af5d1f81b12945e766febfc18e21ec3dd9640e3d952d156eb5  shimx64.efi
+369833bef889fc454b3aba69e8877ad0919a669de4ef6c50912c91fa1ad63c85  shimaa64.nx.efi
+0d5a1994835ac7ec359e8b98dea0803689a7ff090e2292f8a10a01c30948c8ea  shimx64.nx.efi
 ```
 
 *******************************************************************************
@@ -355,7 +355,7 @@ shim:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+shim.rocky,3,Rocky Linux,shim,16.1,mailto:security@rockylinux.org
 ```
 
 grub2:
@@ -389,7 +389,7 @@ shim:
 ```
 sbat,1,SBAT Version,sbat,1,https://github.com/rhboot/shim/blob/main/SBAT.md
 shim,4,UEFI shim,shim,1,https://github.com/rhboot/shim
-shim.rocky,3,Rocky Linux,shim,16.1,security@rockylinux.org
+shim.rocky,3,Rocky Linux,shim,16.1,mailto:security@rockylinux.org
 ```
 
 grub2:
@@ -495,4 +495,5 @@ We always participate in the peer-review process for other distros, usually RHEL
 *******************************************************************************
 ### Add any additional information you think we may need to validate this shim signing application.
 *******************************************************************************
-We renamed our CA cert file we upload to the submission to match the same file name in our rocky-sb-certs package secureboot-ca-aarch64.cer and secureboot-ca-x86_64.cer are symlinks to rocky-root-ca.der from here https://git.rockylinux.org/staging/rpms/rocky-release/-/tree/r10s?ref_type=heads
+* We renamed our CA cert file we upload to the submission to match the same file name in our rocky-sb-certs package secureboot-ca-aarch64.cer and secureboot-ca-x86_64.cer are symlinks to rocky-root-ca.der from here https://git.rockylinux.org/staging/rpms/rocky-release/-/tree/r10s?ref_type=heads
+* This is identical submission as #529 but with NX enabled and we fixed mailto in our SHIM sbat entry
